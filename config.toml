@@ -5,13 +5,12 @@ theme = "hugo-theme-learn"
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
-baseURL = "https://PhapNguyenHoangViet.github.io/SovicoLab/"
-
+baseURL = "https://PhapNguyenHoangViet.github.io/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/"
 [params]
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "workshop"
   # Git hub repo link
-  editURL = "https://PhapNguyenHoangViet.github.io/SovicoLab/"
+  editURL = "https://PhapNguyenHoangViet.github.io/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/"
   description = ""
   author = "vietphap090603@gmail.com"
   showVisitedLinks = true
@@ -20,7 +19,7 @@ baseURL = "https://PhapNguyenHoangViet.github.io/SovicoLab/"
   
 [Languages]
 [Languages.en]
-title = "LAB SOVICO SKILL ACCELERATION"
+title = "Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS"
 weight = 1
 languageName = "English"
 
