@@ -36,7 +36,7 @@ url = "https://www.facebook.com/groups/awsstudygroupfcj"
 weight = 20
 
 [Languages.vi]
-title = "LAB SOVICO SKILL ACCELERATION"
+title = "Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS"
 weight = 2
 languageName = "Tiếng Việt"
 
