@@ -3,7 +3,7 @@
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.127.0">
+    <meta name="generator" content="Hugo 0.131.0">
     <meta name="description" content="">
 <meta name="author" content="vietphap090603@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Categories :: Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS</title>
 
     
-    <link href="/css/nucleus.css?1719396870" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1719396870" rel="stylesheet">
-    <link href="/css/hybrid.css?1719396870" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1719396870" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1719396870" rel="stylesheet">
-    <link href="/css/auto-complete.css?1719396870" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1719396870" rel="stylesheet">
-    <link href="/css/theme.css?1719396870" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1719396870" rel="stylesheet">
+    <link href="/css/nucleus.css?1725589189" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725589189" rel="stylesheet">
+    <link href="/css/hybrid.css?1725589189" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725589189" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725589189" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725589189" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725589189" rel="stylesheet">
+    <link href="/css/theme.css?1725589189" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725589189" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1719396870" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725589189" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1719396870"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725589189"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1719396870"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1719396870"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725589189"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725589189"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1719396870"></script>
+<script type="text/javascript" src="/js/search.js?1725589189"></script>
 
     
   </div>
@@ -82,39 +82,13 @@
  
   
     
-    <li data-nav-id="/1-introduce/" title="Introduction" class="dd-item 
+    <li data-nav-id="/1-introduction/" title="Introduction" class="dd-item 
         
         
         
         ">
-      <a href="/1-introduce/">
-           <b> 1. </b> Introduction
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-vpcfundamentals/" title="Fundamentals" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/2-vpcfundamentals/">
-           <b> 2.  </b> Fundamentals
+      <a href="/1-introduction/">
+          <b>1. </b>Introduction
           
             <i class="fas fa-check read-icon"></i>
           
@@ -139,13 +113,13 @@
  
   
     
-    <li data-nav-id="/2-vpcfundamentals/2.1-amazon-vpc/" title="Amazon VPC" class="dd-item 
+    <li data-nav-id="/1-introduction/1-awsgenaillmchatbot/" title="AWS GenAI LLM Chatbot" class="dd-item 
         
         
         
         ">
-      <a href="/2-vpcfundamentals/2.1-amazon-vpc/">
-           <b> 2.1 </b> Amazon VPC
+      <a href="/1-introduction/1-awsgenaillmchatbot/">
+          <b>1.1. </b>AWS GenAI LLM Chatbot
           
             <i class="fas fa-check read-icon"></i>
           
@@ -167,13 +141,13 @@
  
   
     
-    <li data-nav-id="/2-vpcfundamentals/2.2-subnets/" title="Subnet" class="dd-item 
+    <li data-nav-id="/1-introduction/2-awsresourcesdeployed/" title="AWS Resources Overview" class="dd-item 
         
         
         
         ">
-      <a href="/2-vpcfundamentals/2.2-subnets/">
-           <b> 2.2 </b> Subnet
+      <a href="/1-introduction/2-awsresourcesdeployed/">
+          <b>1.2. </b>AWS Resources Overview
           
             <i class="fas fa-check read-icon"></i>
           
@@ -195,153 +169,13 @@
  
   
     
-    <li data-nav-id="/2-vpcfundamentals/2.3-network-acls/" title="Network ACLs" class="dd-item 
+    <li data-nav-id="/1-introduction/3-modelrequirements/" title="Model Requirements" class="dd-item 
         
         
         
         ">
-      <a href="/2-vpcfundamentals/2.3-network-acls/">
-           <b> 2.3 </b> Network ACLs
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-vpcfundamentals/2.4-route-tables/" title="Route Tables" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/2-vpcfundamentals/2.4-route-tables/">
-           <b> 2.4 </b> Route Tables
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-vpcfundamentals/2.5-internet-connectivity/" title="Internet Connectivity" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/2-vpcfundamentals/2.5-internet-connectivity/">
-           <b> 2.5 </b> Internet Connectivity
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-vpcfundamentals/2.6-vpc-endpoints/" title="VPC Endpoints" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/2-vpcfundamentals/2.6-vpc-endpoints/">
-           <b> 2.6 </b> VPC Endpoints
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-vpcfundamentals/2.7-ec2-instances/" title="EC2 instances" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/2-vpcfundamentals/2.7-ec2-instances/">
-           <b> 2.7 </b> EC2 instances
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-vpcfundamentals/2.8-test-connectivity/" title="Test Connectivity" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/2-vpcfundamentals/2.8-test-connectivity/">
-           <b> 2.8 </b> Test Connectivity
+      <a href="/1-introduction/3-modelrequirements/">
+          <b>1.3. </b>Model Requirements
           
             <i class="fas fa-check read-icon"></i>
           
@@ -370,13 +204,13 @@
  
   
     
-    <li data-nav-id="/3-multiplevpcs/" title="Multiple VPCs" class="dd-item 
+    <li data-nav-id="/2-preparation-steps/" title="Preparation steps" class="dd-item 
         
         
         
         ">
-      <a href="/3-multiplevpcs/">
-           <b> 3. </b> Multiple VPCs
+      <a href="/2-preparation-steps/">
+          <b>2. </b>Preparation steps
           
             <i class="fas fa-check read-icon"></i>
           
@@ -401,13 +235,13 @@
  
   
     
-    <li data-nav-id="/3-multiplevpcs/3.1-vpc-peering/" title="VPC Peering" class="dd-item 
+    <li data-nav-id="/2-preparation-steps/1-creatingiamuser/" title="Creating IAM User" class="dd-item 
         
         
         
         ">
-      <a href="/3-multiplevpcs/3.1-vpc-peering/">
-           <b> 3.1 </b> VPC Peering
+      <a href="/2-preparation-steps/1-creatingiamuser/">
+          <b>2.1. </b>Creating IAM User
           
             <i class="fas fa-check read-icon"></i>
           
@@ -429,13 +263,13 @@
  
   
     
-    <li data-nav-id="/3-multiplevpcs/3.2-transit-gateway/" title="Transit Gateway" class="dd-item 
+    <li data-nav-id="/2-preparation-steps/2-creatingvpc/" title="Creating VPC" class="dd-item 
         
         
         
         ">
-      <a href="/3-multiplevpcs/3.2-transit-gateway/">
-           <b> 3.2 </b> Transit Gateway
+      <a href="/2-preparation-steps/2-creatingvpc/">
+          <b>2.2. </b>Creating VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -457,13 +291,69 @@
  
   
     
-    <li data-nav-id="/3-multiplevpcs/3.3-tgw-route-tables/" title="TGW Route Tables" class="dd-item 
+    <li data-nav-id="/2-preparation-steps/3-setupsecuritygroups/" title="Setup Security Groups" class="dd-item 
         
         
         
         ">
-      <a href="/3-multiplevpcs/3.3-tgw-route-tables/">
-           <b> 3.3 </b> TGW Route Tables
+      <a href="/2-preparation-steps/3-setupsecuritygroups/">
+          <b>2.3. </b>Setup Security Groups
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-preparation-steps/4-launchec2instance/" title="Launch EC2 instance" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-preparation-steps/4-launchec2instance/">
+          <b>2.4. </b>Launch EC2 instance
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-preparation-steps/5-connecttoec2fromvscode/" title="Connecting to EC2 Instance from VSCode" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-preparation-steps/5-connecttoec2fromvscode/">
+          <b>2.5. </b>Connecting to EC2 Instance from VSCode
           
             <i class="fas fa-check read-icon"></i>
           
@@ -492,13 +382,13 @@
  
   
     
-    <li data-nav-id="/4-securitycontrols/" title="Security Controls" class="dd-item 
+    <li data-nav-id="/3-setupproject/" title="Setup Project" class="dd-item 
         
         
         
         ">
-      <a href="/4-securitycontrols/">
-           <b> 4. </b> Security Controls
+      <a href="/3-setupproject/">
+          <b>3. </b>Setup Project
           
             <i class="fas fa-check read-icon"></i>
           
@@ -523,13 +413,13 @@
  
   
     
-    <li data-nav-id="/4-securitycontrols/4.1-network-acls/" title="Network ACLs" class="dd-item 
+    <li data-nav-id="/3-setupproject/1-folkrepository/" title="Folk repository" class="dd-item 
         
         
         
         ">
-      <a href="/4-securitycontrols/4.1-network-acls/">
-           <b> 4.1 </b> Network ACLs
+      <a href="/3-setupproject/1-folkrepository/">
+          <b>3.1. </b>Folk repository
           
             <i class="fas fa-check read-icon"></i>
           
@@ -551,13 +441,13 @@
  
   
     
-    <li data-nav-id="/4-securitycontrols/4.2-security-groups/" title="Security Groups" class="dd-item 
+    <li data-nav-id="/3-setupproject/2-installnotejs/" title="Install NodeJs" class="dd-item 
         
         
         
         ">
-      <a href="/4-securitycontrols/4.2-security-groups/">
-           <b> 4.2 </b> Security Groups
+      <a href="/3-setupproject/2-installnotejs/">
+          <b>3.2. </b>Install NodeJs
           
             <i class="fas fa-check read-icon"></i>
           
@@ -579,13 +469,13 @@
  
   
     
-    <li data-nav-id="/4-securitycontrols/4.3-endpoint-policies/" title="Endpoint Policies" class="dd-item 
+    <li data-nav-id="/3-setupproject/3-installdocker/" title="Install Docker" class="dd-item 
         
         
         
         ">
-      <a href="/4-securitycontrols/4.3-endpoint-policies/">
-           <b> 4.3 </b> Endpoint Policies
+      <a href="/3-setupproject/3-installdocker/">
+          <b>3.3. </b>Install Docker
           
             <i class="fas fa-check read-icon"></i>
           
@@ -614,114 +504,18 @@
  
   
     
-    <li data-nav-id="/5-connectingtoon-premises/" title="Connecting to On-Premises" class="dd-item 
+    <li data-nav-id="/4-deploy/" title="Deploy Chatbot" class="dd-item 
         
         
         
         ">
-      <a href="/5-connectingtoon-premises/">
-           <b> 5. </b> Connecting to On-Premises
+      <a href="/4-deploy/">
+          <b>4. </b>Deploy Chatbot
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-connectingtoon-premises/5.1-establish-vpn-connection/" title="Establish VPN Connection" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-connectingtoon-premises/5.1-establish-vpn-connection/">
-           <b> 5.1 </b> Establish VPN Connection
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-connectingtoon-premises/5.2-explore-hybrid-environment/" title="Explore Hybrid Environment" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-connectingtoon-premises/5.2-explore-hybrid-environment/">
-           <b> 5.2 </b> Explore Hybrid Environment
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-connectingtoon-premises/5.3-hybrid-dns/" title="Hybrid DNS" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-connectingtoon-premises/5.3-hybrid-dns/">
-           <b> 5.3 </b> Hybrid DNS
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
               
     </li>
   
@@ -736,44 +530,13 @@
  
   
     
-    <li data-nav-id="/6-networkmonitoring/" title="Network Monitoring" class="dd-item 
+    <li data-nav-id="/5-usingkendra/" title="Using Kendra with a non-english index" class="dd-item 
         
         
         
         ">
-      <a href="/6-networkmonitoring/">
-           <b> 6. </b> Network Monitoring
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/6-networkmonitoring/6.1-cloudwatch/" title="CloudWatch" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/6-networkmonitoring/6.1-cloudwatch/">
-           <b> 6.1 </b> CloudWatch
+      <a href="/5-usingkendra/">
+          <b>5. </b>Using Kendra with a non-english index
           
             <i class="fas fa-check read-icon"></i>
           
@@ -784,10 +547,8 @@
   
  
 
-            
           
-            
-            
+          
 
 
 
@@ -795,13 +556,13 @@
  
   
     
-    <li data-nav-id="/6-networkmonitoring/6.2-vpc-flow-logs/" title="VPC Flow Logs" class="dd-item 
+    <li data-nav-id="/6-custompublicdomain/" title="Custom public domain" class="dd-item 
         
         
         
         ">
-      <a href="/6-networkmonitoring/6.2-vpc-flow-logs/">
-           <b> 6.2 </b> VPC Flow Logs
+      <a href="/6-custompublicdomain/">
+          <b>6. </b>Custom public domain
           
             <i class="fas fa-check read-icon"></i>
           
@@ -812,10 +573,131 @@
   
  
 
-            
           
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/7-privatechatbot/" title="Private Chatbot" class="dd-item 
         
-        </ul>
+        
+        
+        ">
+      <a href="/7-privatechatbot/">
+          <b>7. </b>Private Chatbot
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/8-cognitofederation/" title="Cognito Federation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/8-cognitofederation/">
+          <b>8. </b>Cognito Federation
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/9-monitoring/" title="Monitoring" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/9-monitoring/">
+          <b>9. </b>Monitoring
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/10-testresult/" title="Test Result" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/10-testresult/">
+          <b>10. </b>Test Result
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/11-cleanup/" title="Clean up" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/11-cleanup/">
+          <b>11. </b>Clean up
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
               
     </li>
   
@@ -944,7 +826,7 @@
             
           
           
-            <a href='/'>Workshop</a> > Categories
+            <a href='/'>Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS</a> > Categories
           
         
           
@@ -1031,106 +913,10 @@
 
                     
                     
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                         
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1197,6 +983,38 @@
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1325,10 +1143,43 @@
 
                     
                     
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
                     
                     
 
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1378,24 +1229,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
                         
             
             
@@ -1424,9 +1257,6 @@
                     
                     
 
-                    
-            
-        
                     
             
         
@@ -1441,7 +1271,7 @@
 	 
 		
 		
-			<a class="nav nav-next" href="/1-introduce/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/1-introduction/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1451,19 +1281,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1719396870"></script>
-    <script src="/js/perfect-scrollbar.min.js?1719396870"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1719396870"></script>
-    <script src="/js/jquery.sticky.js?1719396870"></script>
-    <script src="/js/featherlight.min.js?1719396870"></script>
-    <script src="/js/highlight.pack.js?1719396870"></script>
+    <script src="/js/clipboard.min.js?1725589189"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725589189"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725589189"></script>
+    <script src="/js/jquery.sticky.js?1725589189"></script>
+    <script src="/js/featherlight.min.js?1725589189"></script>
+    <script src="/js/highlight.pack.js?1725589189"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1719396870"></script>
-    <script src="/js/learn.js?1719396870"></script>
-    <script src="/js/hugo-learn.js?1719396870"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725589189"></script>
+    <script src="/js/learn.js?1725589189"></script>
+    <script src="/js/hugo-learn.js?1725589189"></script>
 
-    <link href="/mermaid/mermaid.css?1719396870" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1719396870"></script>
+    <link href="/mermaid/mermaid.css?1725589189" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725589189"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
