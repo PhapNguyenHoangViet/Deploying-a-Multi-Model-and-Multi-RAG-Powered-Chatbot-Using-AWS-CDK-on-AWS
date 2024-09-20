@@ -9,7 +9,7 @@ pre = "<b>1.1. </b>"
 
 The **AWS GenAI LLM Chatbot** provides ready-to-use code so you can start experimenting with a variety of **Large Language Models** and **Multimodal Language Models**, settings and prompts in your own AWS account.
 
-![10-testresult](/images/10-testresult/003-10-testresult.png?width=90pc)
+![10-testresult](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/10-testresult/003-10-testresult.png?width=90pc)
 
 ### **Features**
 ### Modular, comprehensive and ready to use

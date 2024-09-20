@@ -12,21 +12,21 @@
     <title>Dọn dẹp :: Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS</title>
 
     
-    <link href="/css/nucleus.css?1726845262" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1726845262" rel="stylesheet">
-    <link href="/css/hybrid.css?1726845262" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1726845262" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1726845262" rel="stylesheet">
-    <link href="/css/auto-complete.css?1726845262" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1726845262" rel="stylesheet">
-    <link href="/css/theme.css?1726845262" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1726845262" rel="stylesheet">
+    <link href="/css/nucleus.css?1726846002" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1726846002" rel="stylesheet">
+    <link href="/css/hybrid.css?1726846002" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1726846002" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1726846002" rel="stylesheet">
+    <link href="/css/auto-complete.css?1726846002" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1726846002" rel="stylesheet">
+    <link href="/css/theme.css?1726846002" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1726846002" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1726845262" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1726846002" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1726845262"></script>
+    <script src="/js/jquery-3.3.1.min.js?1726846002"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1726845262"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1726845262"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1726846002"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1726846002"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1726845262"></script>
+<script type="text/javascript" src="/js/search.js?1726846002"></script>
 
     
   </div>
@@ -1086,12 +1086,12 @@
 	<h3 id="dọn-dẹp">Dọn dẹp</h3>
 <p>Bạn có thể xóa các stack và tất cả các tài nguyên liên quan đã được tạo trong tài khoản AWS của bạn bằng cách chạy lệnh sau:</p>
 <pre tabindex="0"><code>npx cdk destroy
-</code></pre><p><img alt="11-cleanup" src="/images/11-cleanup/001-11-cleanup.png?width=90pc"></p>
-<p><img alt="11-cleanup" src="/images/11-cleanup/002-11-cleanup.png?width=90pc"></p>
+</code></pre><p><img alt="11-cleanup" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/11-cleanup/001-11-cleanup.png?width=90pc"></p>
+<p><img alt="11-cleanup" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/11-cleanup/002-11-cleanup.png?width=90pc"></p>
 <ul>
 <li>Nhập: <code>y</code></li>
 </ul>
-<p><img alt="11-cleanup" src="/images/11-cleanup/003-11-cleanup.png?width=90pc"></p>
+<p><img alt="11-cleanup" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/11-cleanup/003-11-cleanup.png?width=90pc"></p>
 
 <div class="notices note" ><p>Tùy thuộc vào các tài nguyên đã được triển khai, việc xóa stack có thể mất một thời gian, lên đến 45 phút. Nếu việc xóa thất bại nhiều lần, hãy xóa thủ công các ENI còn lại của stack; bạn có thể lọc ENI theo VPC/Subnet/v.v. bằng cách sử dụng thanh tìm kiếm trong bảng điều khiển AWS.</p>
 </div>
@@ -1101,49 +1101,49 @@
 <li>Tìm <code>CloudFormation</code></li>
 <li>Nhấp vào <strong>CloudFormation</strong></li>
 </ul>
-<p><img alt="11-cleanup" src="/images/11-cleanup/013-11-cleanup.png?width=90pc"></p>
+<p><img alt="11-cleanup" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/11-cleanup/013-11-cleanup.png?width=90pc"></p>
 <ul>
 <li>Nhấp vào Xóa để xóa <strong>stack CDKToolkit</strong></li>
 </ul>
-<p><img alt="11-cleanup" src="/images/11-cleanup/004-11-cleanup.png?width=90pc"></p>
+<p><img alt="11-cleanup" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/11-cleanup/004-11-cleanup.png?width=90pc"></p>
 <ul>
 <li><strong>Đang xóa</strong></li>
 </ul>
-<p><img alt="11-cleanup" src="/images/11-cleanup/005-11-cleanup.png?width=90pc"></p>
+<p><img alt="11-cleanup" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/11-cleanup/005-11-cleanup.png?width=90pc"></p>
 <h4 id="ecr"><strong>ECR</strong></h4>
 <ul>
 <li>Tìm <code>ECR</code></li>
 <li>Nhấp vào <strong>ECR</strong></li>
 </ul>
-<p><img alt="11-cleanup" src="/images/11-cleanup/011-11-cleanup.png?width=90pc"></p>
+<p><img alt="11-cleanup" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/11-cleanup/011-11-cleanup.png?width=90pc"></p>
 <ul>
 <li><strong>Xóa hình ảnh</strong> trong các kho chứa (Private registry ECR)</li>
 </ul>
-<p><img alt="11-cleanup" src="/images/11-cleanup/007-11-cleanup.png?width=90pc"></p>
+<p><img alt="11-cleanup" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/11-cleanup/007-11-cleanup.png?width=90pc"></p>
 <ul>
 <li><strong>Xóa các kho chứa</strong> (Private registry ECR)</li>
 </ul>
-<p><img alt="11-cleanup" src="/images/11-cleanup/006-11-cleanup.png?width=90pc"></p>
+<p><img alt="11-cleanup" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/11-cleanup/006-11-cleanup.png?width=90pc"></p>
 <h4 id="s3-bucket"><strong>S3 bucket</strong></h4>
 <ul>
 <li>Tìm <code>S3</code></li>
 <li>Nhấp vào <strong>S3</strong></li>
 </ul>
-<p><img alt="11-cleanup" src="/images/11-cleanup/012-11-cleanup.png?width=90pc"></p>
+<p><img alt="11-cleanup" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/11-cleanup/012-11-cleanup.png?width=90pc"></p>
 <ul>
 <li>Trong kho chứa, xóa nội dung kho chứa rồi xóa kho chứa.</li>
 </ul>
-<p><img alt="11-cleanup" src="/images/11-cleanup/008-11-cleanup.png?width=90pc"></p>
+<p><img alt="11-cleanup" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/11-cleanup/008-11-cleanup.png?width=90pc"></p>
 <h4 id="ec2-instance"><strong>EC2 instance</strong></h4>
 <ul>
 <li>Tìm <code>EC2</code></li>
 <li>Nhấp vào <strong>EC2</strong></li>
 </ul>
-<p><img alt="11-cleanup" src="/images/11-cleanup/010-11-cleanup.png?width=90pc"></p>
+<p><img alt="11-cleanup" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/11-cleanup/010-11-cleanup.png?width=90pc"></p>
 <ul>
 <li>Trong các phiên bản EC2, kết thúc (xóa) phiên bản.</li>
 </ul>
-<p><img alt="11-cleanup" src="/images/11-cleanup/009-11-cleanup.png?width=90pc"></p>
+<p><img alt="11-cleanup" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/11-cleanup/009-11-cleanup.png?width=90pc"></p>
 
 
 
@@ -1663,19 +1663,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1726845262"></script>
-    <script src="/js/perfect-scrollbar.min.js?1726845262"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1726845262"></script>
-    <script src="/js/jquery.sticky.js?1726845262"></script>
-    <script src="/js/featherlight.min.js?1726845262"></script>
-    <script src="/js/highlight.pack.js?1726845262"></script>
+    <script src="/js/clipboard.min.js?1726846002"></script>
+    <script src="/js/perfect-scrollbar.min.js?1726846002"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1726846002"></script>
+    <script src="/js/jquery.sticky.js?1726846002"></script>
+    <script src="/js/featherlight.min.js?1726846002"></script>
+    <script src="/js/highlight.pack.js?1726846002"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1726845262"></script>
-    <script src="/js/learn.js?1726845262"></script>
-    <script src="/js/hugo-learn.js?1726845262"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1726846002"></script>
+    <script src="/js/learn.js?1726846002"></script>
+    <script src="/js/hugo-learn.js?1726846002"></script>
 
-    <link href="/mermaid/mermaid.css?1726845262" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1726845262"></script>
+    <link href="/mermaid/mermaid.css?1726846002" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1726846002"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

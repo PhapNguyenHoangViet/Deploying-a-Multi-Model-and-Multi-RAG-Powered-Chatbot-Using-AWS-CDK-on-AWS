@@ -38,7 +38,7 @@ else:
     )
 ```
 
-![7-usingkenra](/images/7-usingkenra/001-7-usingkenra.png?width=90pc)
+![7-usingkenra](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/7-usingkenra/001-7-usingkenra.png?width=90pc)
 
 Sau khi thực hiện những thay đổi này, bạn cần phải redeploy giải pháp:
 ```

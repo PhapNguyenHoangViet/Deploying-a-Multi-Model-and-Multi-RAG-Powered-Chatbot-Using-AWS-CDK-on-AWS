@@ -25,27 +25,27 @@ Bạn có thể triển khai giải pháp ở một khu vực khác với nơi b
 - Tìm **Bedrock**
 - Chọn **Bedrock**
 
-![3-modelrequirements](/images/1-introduction/3-modelrequirements/001-3-modelrequirements.png?width=90pc)
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/001-3-modelrequirements.png?width=90pc)
 
 - Chọn **Model access**
 - Chọn **Enable all models**
 
-![3-modelrequirements](/images/1-introduction/3-modelrequirements/002-3-modelrequirements.png?width=90pc)
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/002-3-modelrequirements.png?width=90pc)
 
 - Chọn **next**
 
-![3-modelrequirements](/images/1-introduction/3-modelrequirements/003-3-modelrequirements.png?width=90pc)
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/003-3-modelrequirements.png?width=90pc)
 
 - Chọn **Submit**
 
-![3-modelrequirements](/images/1-introduction/3-modelrequirements/004-3-modelrequirements.png?width=90pc)
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/004-3-modelrequirements.png?width=90pc)
 
 - **Amazon Bedrock**
 
-![3-modelrequirements](/images/1-introduction/3-modelrequirements/005-3-modelrequirements.png?width=90pc)
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/005-3-modelrequirements.png?width=90pc)
 
-![3-modelrequirements](/images/1-introduction/3-modelrequirements/006-3-modelrequirements.png?width=90pc)
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/006-3-modelrequirements.png?width=90pc)
 
-![3-modelrequirements](/images/1-introduction/3-modelrequirements/007-3-modelrequirements.png?width=90pc)
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/007-3-modelrequirements.png?width=90pc)
 
-![3-modelrequirements](/images/1-introduction/3-modelrequirements/008-3-modelrequirements.png?width=90pc)
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/008-3-modelrequirements.png?width=90pc)

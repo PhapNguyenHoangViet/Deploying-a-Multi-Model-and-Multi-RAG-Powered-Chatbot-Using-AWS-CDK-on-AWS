@@ -12,7 +12,7 @@ Giải pháp có thể cấu hình để triển khai một loạt tài nguyên,
 
 Khuyến nghị xem xét để hiểu các cấu hình triển khai, an ninh và ảnh hưởng về chi phí, cũng như các thực hành tốt nhất tổng thể.
 
-![kiến trúc](/images/architecture1.png?width=90pc)
+![kiến trúc](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/architecture1.png?width=90pc)
 
 {{% notice note %}}
 Danh sách này được coi là một cách tiếp cận tốt nhất để giúp bạn hiểu các tài nguyên trong môi trường của mình và có thể không bao quát tất cả. Hãy đảm bảo bạn xem xét giải pháp và xác thực yêu cầu trước khi triển khai.

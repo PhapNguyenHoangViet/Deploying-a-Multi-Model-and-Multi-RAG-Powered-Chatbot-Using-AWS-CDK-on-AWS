@@ -14,7 +14,7 @@ Because the solution is configurable to deploy an array of resources, not all re
 It is recommended to review the full documentation to understand deployment configurations, security & cost implications, and overall best practices.
 
 
-![architecture](/images/architecture1.png?width=90pc)
+![architecture](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/architecture1.png?width=90pc)
 
 
 {{% notice note %}}

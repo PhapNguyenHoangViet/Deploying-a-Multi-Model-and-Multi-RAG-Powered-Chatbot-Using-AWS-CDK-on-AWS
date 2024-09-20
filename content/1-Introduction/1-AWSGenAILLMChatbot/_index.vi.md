@@ -8,7 +8,7 @@ pre = "<b>1.1. </b>"
 
 **AWS GenAI LLM Chatbot** cung cấp mã nguồn sẵn có để bạn có thể bắt đầu thử nghiệm với nhiều **Mô hình Ngôn Ngữ Lớn** (LLMs) và **Mô hình Ngôn Ngữ Đa Phương Tiện** (MLMs) trong tài khoản AWS của riêng bạn.
 
-![10-testresult](/images/10-testresult/003-10-testresult.png?width=90pc)
+![10-testresult](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/10-testresult/003-10-testresult.png?width=90pc)
 
 ### Tính năng
 #### Đa mô-đun, toàn diện và sẵn sàng sử dụng

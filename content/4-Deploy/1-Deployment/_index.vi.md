@@ -13,7 +13,7 @@ pre = "<b>4.1. </b>"
 git clone https://github.com/aws-samples/aws-genai-llm-chatbot
 ```
 
-![4-deployment](/images/4-deploy/001-1-deployment.png?width=90pc)
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/001-1-deployment.png?width=90pc)
 
 
 2. Di chuyển vào kho lưu trữ.
@@ -22,7 +22,7 @@ git clone https://github.com/aws-samples/aws-genai-llm-chatbot
 cd aws-genai-llm-chatbot
 ```
 
-![4-deployment](/images/4-deploy/002-1-deployment.png?width=90pc)
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/002-1-deployment.png?width=90pc)
 
 3. Cài đặt các phụ thuộc của dự án và xây dựng dự án.
 
@@ -30,14 +30,14 @@ cd aws-genai-llm-chatbot
 npm ci && npm run build
 ```
 
-![4-deployment](/images/4-deploy/003-1-deployment.png?width=90pc)
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/003-1-deployment.png?width=90pc)
 
 4. (Tùy chọn) Chạy unit tests
 ```
 npm run test && pip install -r pytest_requirements.txt && pytest tests
 ```
 
-![4-deployment](/images/4-deploy/004-1-deployment.png?width=90pc)
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/004-1-deployment.png?width=90pc)
 
 
 5. Khi hoàn tất, chạy lệnh cấu hình để giúp bạn thiết lập giải pháp với các tính năng bạn cần:
@@ -56,7 +56,7 @@ Bạn sẽ được nhắc cấu hình các khía cạnh khác nhau của giải
 
 Khi hoàn tất, hãy trả lời Y để tạo hoặc cập nhật cấu hình của bạn.
 
-![4-deployment](/images/4-deploy/005-1-deployment.png?width=90pc)
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/005-1-deployment.png?width=90pc)
 
 Cấu hình của bạn hiện được lưu trữ trong `bin/config.json`. Bạn có thể chạy lại lệnh `npm run config` khi cần để cập nhật `config.json`.
 
@@ -65,14 +65,14 @@ export AWS_ACCESS_KEY_ID=your_aws_access_key_id
 export AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
 ```
 
-![4-deployment](/images/4-deploy/006-1-deployment.png?width=90pc)
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/006-1-deployment.png?width=90pc)
 
 ```
 echo $AWS_ACCESS_KEY_ID
 echo $AWS_SECRET_ACCESS_KEY
 ```
 
-![4-deployment](/images/4-deploy/007-1-deployment.png?width=90pc)
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/007-1-deployment.png?width=90pc)
 
 
 6. Bây giờ bạn có thể triển khai bằng cách chạy:
@@ -86,13 +86,13 @@ Thời gian của bước này có thể thay đổi đáng kể(khoảng 45p), 
 {{% /notice %}}
 
 
-![4-deployment](/images/4-deploy/010-1-deployment.png?width=90pc)
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/010-1-deployment.png?width=90pc)
 
 
 Bạn có thể xem tiến trình triển khai CDK của mình trong [bảng điều khiển CloudFormation](https://console.aws.amazon.com/cloudformation/home) trong **region** đã chọn.
 
 
-![4-deployment](/images/4-deploy/008-1-deployment.png?width=90pc)
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/008-1-deployment.png?width=90pc)
 
 
 7. Khi đã triển khai xong, hãy ghi nhớ Giao diện người dùng, Pool người dùng và, nếu bạn muốn tương tác với các nhà cung cấp mô hình bên thứ ba,API_KEYS để truy cập các nhà cung cấp mô hình bên thứ ba.
@@ -109,7 +109,7 @@ GenAIChatBotStack.ApiKeysSecretNameXXXX = ApiKeysSecretName-xxxxxx
 8. Mở liên kết **Cognito User Pool** được tạo từ các đầu ra ở trên.
 
 
-![4-deployment](/images/4-deploy/009-1-deployment.png?width=90pc)
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/009-1-deployment.png?width=90pc)
 
 9. Thêm một người dùng sẽ được sử dụng để đăng nhập vào giao diện web.
 
