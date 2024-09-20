@@ -12,21 +12,21 @@
     <title>Model Requirements :: Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS</title>
 
     
-    <link href="/css/nucleus.css?1726848624" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1726848624" rel="stylesheet">
-    <link href="/css/hybrid.css?1726848624" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1726848624" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1726848624" rel="stylesheet">
-    <link href="/css/auto-complete.css?1726848624" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1726848624" rel="stylesheet">
-    <link href="/css/theme.css?1726848624" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1726848624" rel="stylesheet">
+    <link href="/css/nucleus.css?1726851028" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1726851028" rel="stylesheet">
+    <link href="/css/hybrid.css?1726851028" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1726851028" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1726851028" rel="stylesheet">
+    <link href="/css/auto-complete.css?1726851028" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1726851028" rel="stylesheet">
+    <link href="/css/theme.css?1726851028" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1726851028" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1726848624" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1726851028" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1726848624"></script>
+    <script src="/js/jquery-3.3.1.min.js?1726851028"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1726848624"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1726848624"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1726851028"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1726851028"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1726848624"></script>
+<script type="text/javascript" src="/js/search.js?1726851028"></script>
 
     
   </div>
@@ -1061,8 +1061,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#amazon-sagemaker-requirements-for-self-hosted-models-onlyhttpsaws-samplesgithubioaws-genai-llm-chatbotdocumentationmodel-requirementshtmlamazon-sagemaker-requirements-for-self-hosted-models-only"><strong>Amazon SageMaker requirements (for self-hosted models only)<a href="https://aws-samples.github.io/aws-genai-llm-chatbot/documentation/model-requirements.html#amazon-sagemaker-requirements-for-self-hosted-models-only"></a></strong></a></li>
-        <li><a href="#amazon-bedrock-requirementshttpsaws-samplesgithubioaws-genai-llm-chatbotdocumentationmodel-requirementshtmlamazon-bedrock-requirements"><strong>Amazon Bedrock requirements<a href="https://aws-samples.github.io/aws-genai-llm-chatbot/documentation/model-requirements.html#amazon-bedrock-requirements"></a></strong></a></li>
+        <li></li>
       </ul>
     </li>
   </ul>
@@ -1090,10 +1089,10 @@
 
 
 
-	<h3 id="amazon-sagemaker-requirements-for-self-hosted-models-onlyhttpsaws-samplesgithubioaws-genai-llm-chatbotdocumentationmodel-requirementshtmlamazon-sagemaker-requirements-for-self-hosted-models-only"><strong>Amazon SageMaker requirements (for self-hosted models only)<a href="https://aws-samples.github.io/aws-genai-llm-chatbot/documentation/model-requirements.html#amazon-sagemaker-requirements-for-self-hosted-models-only"></a></strong></h3>
+	<h4 id="amazon-sagemaker-requirements-for-self-hosted-models-onlyhttpsaws-samplesgithubioaws-genai-llm-chatbotdocumentationmodel-requirementshtmlamazon-sagemaker-requirements-for-self-hosted-models-only"><strong>Amazon SageMaker requirements (for self-hosted models only)<a href="https://aws-samples.github.io/aws-genai-llm-chatbot/documentation/model-requirements.html#amazon-sagemaker-requirements-for-self-hosted-models-only"></a></strong></h4>
 <p><strong>Instance type quota increase</strong></p>
 <p>If you are looking to self-host models on Amazon SageMaker, you&rsquo;ll likely need to request an increase in service quota for specific SageMaker instance types, such as the <code>ml.g5</code> instance type. This will give access to the latest generation of GPU/Multi-GPU instance types. <a href="https://console.aws.amazon.com/servicequotas/home/services/sagemaker/quotas">You can do this from the AWS console</a></p>
-<h3 id="amazon-bedrock-requirementshttpsaws-samplesgithubioaws-genai-llm-chatbotdocumentationmodel-requirementshtmlamazon-bedrock-requirements"><strong>Amazon Bedrock requirements<a href="https://aws-samples.github.io/aws-genai-llm-chatbot/documentation/model-requirements.html#amazon-bedrock-requirements"></a></strong></h3>
+<h4 id="amazon-bedrock-requirementshttpsaws-samplesgithubioaws-genai-llm-chatbotdocumentationmodel-requirementshtmlamazon-bedrock-requirements"><strong>Amazon Bedrock requirements<a href="https://aws-samples.github.io/aws-genai-llm-chatbot/documentation/model-requirements.html#amazon-bedrock-requirements"></a></strong></h4>
 <p><strong>Base Models Access</strong></p>
 <p>If you are looking to interact with models from Amazon Bedrock, you need to <a href="https://console.aws.amazon.com/bedrock/home?#/modelaccess">request access to the base models in one of the regions where Amazon Bedrock is available</a>. Make sure to read and accept models&rsquo; end-user license agreements or EULA.</p>
 
@@ -1128,6 +1127,53 @@
 <p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/006-3-modelrequirements.png?width=90pc"></p>
 <p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/007-3-modelrequirements.png?width=90pc"></p>
 <p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/008-3-modelrequirements.png?width=90pc"></p>
+<h4 id="third-party-models-requirements">Third-party models requirements</h4>
+<p>You can also interact with external providers via their API, such as AI21 Labs, Cohere, OpenAI, etc.</p>
+<p>The provider must be supported in the <a href="https://github.com/aws-samples/aws-genai-llm-chatbot/blob/main/lib/model-interfaces/langchain/functions/request-handler/index.py">Model Interface</a>, <a href="https://python.langchain.com/docs/integrations/llms/">see available langchain integrations</a> for a comprehensive list of providers.</p>
+<p>Usually, an <code>API_KEY</code> is required to integrate with 3P models. To do so, the <a href="https://github.com/aws-samples/aws-genai-llm-chatbot/blob/main/lib/model-interfaces/langchain/index.ts">Model Interface</a> deployes a Secrets in <a href="https://aws.amazon.com/secrets-manager/">AWS Secrets Manager</a>, intially with an empty JSON <code>{}</code>, where you can add your API KEYS for one or more providers.</p>
+<p>These keys will be injected at runtime into the Lambda function Environment Variables; they won&rsquo;t be visible in the AWS Lambda Console.</p>
+<p>For example, if you wish to be able to interact with AI21 Labs., OpenAI&rsquo;s and Cohere endpoints:</p>
+<ul>
+<li>Open the <a href="https://github.com/aws-samples/aws-genai-llm-chatbot/blob/main/lib/model-interfaces/langchain/index.ts#L38">Model Interface Keys Secret</a> in Secrets Manager. You can find the secret name in the stack output, too.</li>
+<li>Update the Secrets by adding a key to the JSON</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;AI21_API_KEY&#34;</span>: <span style="color:#e6db74">&#34;xxxxx&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;OPENAI_API_KEY&#34;</span>: <span style="color:#e6db74">&#34;sk-xxxxxxxxxxxxxxx&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;COHERE_API_KEY&#34;</span>: <span style="color:#e6db74">&#34;xxxxx&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+<div class="notices note" ><p>In case of no keys needs, the secret value must be an empty JSON <code>{}</code>, NOT an empty string <code>''</code>.</p>
+</div>
+
+<p>make sure that the environment variable matches what is expected by the framework in use, like Langchain (<a href="https://python.langchain.com/docs/integrations/llms/">see available langchain integrations</a>).</p>
+<h4 id="azure-openai-integration-as-third-party-model">Azure OpenAI integration as third party model</h4>
+<ul>
+<li>Open the SharedApiKeysSecretxyz in SecretManager</li>
+<li>Update the Secrets by adding following keys to the JSON (or Key/values):</li>
+</ul>
+<pre tabindex="0"><code>{
+  &#34;AZURE_OPENAI_MODELS&#34;: &#34;Model1,Model2&#34;,
+  &#34;AZURE_OPENAI_API_TYPE__Model1&#34;: &#34;azure&#34;,
+  &#34;AZURE_OPENAI_API_VERSION__Model1&#34;: &#34;2023-05-15&#34;,
+  &#34;AZURE_OPENAI_API_BASE__Model1&#34;: &#34;https://model1.openai.azure.com/&#34;,
+  &#34;AZURE_OPENAI_API_KEY__Model1&#34;: &#34;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#34;,
+  &#34;AZURE_OPENAI_API_DEPLOYMENT_NAME__Model1&#34;: &#34;Model1DeploymentName&#34;,
+  &#34;AZURE_OPENAI_API_TYPE__Model2&#34;: &#34;azure&#34;,
+  &#34;AZURE_OPENAI_API_VERSION__Model2&#34;: &#34;2023-07-01-preview&#34;,
+  &#34;AZURE_OPENAI_API_BASE__Model2&#34;: &#34;https://model2.openai.azure.com/&#34;,
+  &#34;AZURE_OPENAI_API_KEY__Model2&#34;: &#34;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#34;,
+  &#34;AZURE_OPENAI_API_DEPLOYMENT_NAME__Model2&#34;: &#34;Model2DeploymentName&#34;
+}
+</code></pre><p>Here we are integrating 2 other models: Model1 and Model2.
+For each one, we need to define following infos you will retrieve from your Azure OpenAI tenant. ${ModelIdentifier} is either Model1 and Model2 :</p>
+<ul>
+<li><code>AZURE_OPENAI_API_TYPE__${ModelIdentifier}</code></li>
+<li><code>AZURE_OPENAI_API_VERSION__${ModelIdentifier}</code></li>
+<li><code>AZURE_OPENAI_API_BASE__${ModelIdentifier}</code></li>
+<li><code>AZURE_OPENAI_API_KEY__${ModelIdentifier}</code></li>
+<li><code>AZURE_OPENAI_API_DEPLOYMENT_NAME__${ModelIdentifier}</code></li>
+</ul>
 
 
 
@@ -1651,19 +1697,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1726848624"></script>
-    <script src="/js/perfect-scrollbar.min.js?1726848624"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1726848624"></script>
-    <script src="/js/jquery.sticky.js?1726848624"></script>
-    <script src="/js/featherlight.min.js?1726848624"></script>
-    <script src="/js/highlight.pack.js?1726848624"></script>
+    <script src="/js/clipboard.min.js?1726851028"></script>
+    <script src="/js/perfect-scrollbar.min.js?1726851028"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1726851028"></script>
+    <script src="/js/jquery.sticky.js?1726851028"></script>
+    <script src="/js/featherlight.min.js?1726851028"></script>
+    <script src="/js/highlight.pack.js?1726851028"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1726848624"></script>
-    <script src="/js/learn.js?1726848624"></script>
-    <script src="/js/hugo-learn.js?1726848624"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1726851028"></script>
+    <script src="/js/learn.js?1726851028"></script>
+    <script src="/js/hugo-learn.js?1726851028"></script>
 
-    <link href="/mermaid/mermaid.css?1726848624" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1726848624"></script>
+    <link href="/mermaid/mermaid.css?1726851028" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1726851028"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

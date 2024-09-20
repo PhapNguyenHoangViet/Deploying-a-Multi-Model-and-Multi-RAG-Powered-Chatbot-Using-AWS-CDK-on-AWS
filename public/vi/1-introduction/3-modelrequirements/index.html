@@ -12,21 +12,21 @@
     <title>Yêu cầu về Mô hình :: Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS</title>
 
     
-    <link href="/css/nucleus.css?1726848624" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1726848624" rel="stylesheet">
-    <link href="/css/hybrid.css?1726848624" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1726848624" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1726848624" rel="stylesheet">
-    <link href="/css/auto-complete.css?1726848624" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1726848624" rel="stylesheet">
-    <link href="/css/theme.css?1726848624" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1726848624" rel="stylesheet">
+    <link href="/css/nucleus.css?1726851028" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1726851028" rel="stylesheet">
+    <link href="/css/hybrid.css?1726851028" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1726851028" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1726851028" rel="stylesheet">
+    <link href="/css/auto-complete.css?1726851028" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1726851028" rel="stylesheet">
+    <link href="/css/theme.css?1726851028" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1726851028" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1726848624" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1726851028" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1726848624"></script>
+    <script src="/js/jquery-3.3.1.min.js?1726851028"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1726848624"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1726848624"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1726851028"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1726851028"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1726848624"></script>
+<script type="text/javascript" src="/js/search.js?1726851028"></script>
 
     
   </div>
@@ -1124,6 +1124,52 @@
 <p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/006-3-modelrequirements.png?width=90pc"></p>
 <p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/007-3-modelrequirements.png?width=90pc"></p>
 <p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/008-3-modelrequirements.png?width=90pc"></p>
+<h4 id="yêu-cầu-cho-mô-hình-của-bên-thứ-ba">Yêu cầu cho mô hình của bên thứ ba</h4>
+<p>Bạn cũng có thể tương tác với các nhà cung cấp bên ngoài thông qua API của họ, chẳng hạn như AI21 Labs, Cohere, OpenAI,&hellip;</p>
+<p>Nhà cung cấp phải được hỗ trợ trong <a href="https://github.com/aws-samples/aws-genai-llm-chatbot/blob/main/lib/model-interfaces/langchain/functions/request-handler/index.py">Model Interface</a>, <a href="https://python.langchain.com/docs/integrations/llms/"> xem danh sách tích hợp langchain có sẵn</a> để biết danh sách toàn diện các nhà cung cấp.</p>
+<p>Thông thường, một <strong>API_KEY</strong> là cần thiết để tích hợp với các mô hình bên thứ ba. Để làm điều này, <a href="https://github.com/aws-samples/aws-genai-llm-chatbot/blob/main/lib/model-interfaces/langchain/index.ts">Model Interface</a>  sẽ triển khai một <strong>Secrets</strong> trong <a href="https://aws.amazon.com/secrets-manager/">AWS Secrets Manager</a>, ban đầu với một JSON rỗng {}, nơi bạn có thể thêm các API KEY một hoặc nhiều nhà cung cấp.</p>
+<p>Các khóa này sẽ được tiêm vào runtime vào các Biến Môi trường của chức năng Lambda; chúng sẽ không hiển thị trong AWS Lambda Console.</p>
+<p>Ví dụ, nếu bạn muốn có khả năng tương tác với AI21 Labs, OpenAI và Cohere endpoints:</p>
+<ul>
+<li>Mở <a href="https://github.com/aws-samples/aws-genai-llm-chatbot/blob/main/lib/model-interfaces/langchain/index.ts#L38">Model Interface Keys Secret</a> trong Secrets Manager. Bạn cũng có thể tìm thấy tên <strong>Secrets</strong> trong đầu ra của stack.</li>
+<li>Cập nhật <strong>Secrets</strong> bằng cách thêm một khóa vào JSON</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;AI21_API_KEY&#34;</span>: <span style="color:#e6db74">&#34;xxxxx&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;OPENAI_API_KEY&#34;</span>: <span style="color:#e6db74">&#34;sk-xxxxxxxxxxxxxxx&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;COHERE_API_KEY&#34;</span>: <span style="color:#e6db74">&#34;xxxxx&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+<div class="notices note" ><p>Trong trường hợp không cần khóa, giá trị bí mật phải là một JSON rỗng <code>{}</code>, KHÔNG phải là một chuỗi rỗng <code>''</code>.</p>
+</div>
+
+<p>Hãy chắc chắn rằng biến môi trường phù hợp với những gì được yêu cầu bởi khung làm việc đang sử dụng, như Langchain (xem danh sách tích hợp langchain có sẵn).</p>
+<h4 id="tích-hợp-azure-openai-như-mô-hình-bên-thứ-ba">Tích hợp Azure OpenAI như mô hình bên thứ ba</h4>
+<ul>
+<li>Mở bí mật SharedApiKeysSecretxyz trong Secrets Manager</li>
+<li>Cập nhật các Bí mật bằng cách thêm các khóa sau vào JSON (hoặc Key/values):</li>
+</ul>
+<pre tabindex="0"><code>{
+  &#34;AZURE_OPENAI_MODELS&#34;: &#34;Model1,Model2&#34;,
+  &#34;AZURE_OPENAI_API_TYPE__Model1&#34;: &#34;azure&#34;,
+  &#34;AZURE_OPENAI_API_VERSION__Model1&#34;: &#34;2023-05-15&#34;,
+  &#34;AZURE_OPENAI_API_BASE__Model1&#34;: &#34;https://model1.openai.azure.com/&#34;,
+  &#34;AZURE_OPENAI_API_KEY__Model1&#34;: &#34;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#34;,
+  &#34;AZURE_OPENAI_API_DEPLOYMENT_NAME__Model1&#34;: &#34;Model1DeploymentName&#34;,
+  &#34;AZURE_OPENAI_API_TYPE__Model2&#34;: &#34;azure&#34;,
+  &#34;AZURE_OPENAI_API_VERSION__Model2&#34;: &#34;2023-07-01-preview&#34;,
+  &#34;AZURE_OPENAI_API_BASE__Model2&#34;: &#34;https://model2.openai.azure.com/&#34;,
+  &#34;AZURE_OPENAI_API_KEY__Model2&#34;: &#34;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#34;,
+  &#34;AZURE_OPENAI_API_DEPLOYMENT_NAME__Model2&#34;: &#34;Model2DeploymentName&#34;
+}
+</code></pre><p>Ở đây, chúng ta tích hợp 2 mô hình khác: Model1 và Model2. Đối với mỗi mô hình, chúng ta cần xác định các thông tin sau mà bạn sẽ lấy từ tenant Azure OpenAI của mình. ${ModelIdentifier} có thể là Model1 hoặc Model2:</p>
+<ul>
+<li><code>AZURE_OPENAI_API_TYPE__${ModelIdentifier}</code></li>
+<li><code>AZURE_OPENAI_API_VERSION__${ModelIdentifier}</code></li>
+<li><code>AZURE_OPENAI_API_BASE__${ModelIdentifier}</code></li>
+<li><code>AZURE_OPENAI_API_KEY__${ModelIdentifier}</code></li>
+<li><code>AZURE_OPENAI_API_DEPLOYMENT_NAME__${ModelIdentifier}</code></li>
+</ul>
 
 
 
@@ -1647,19 +1693,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1726848624"></script>
-    <script src="/js/perfect-scrollbar.min.js?1726848624"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1726848624"></script>
-    <script src="/js/jquery.sticky.js?1726848624"></script>
-    <script src="/js/featherlight.min.js?1726848624"></script>
-    <script src="/js/highlight.pack.js?1726848624"></script>
+    <script src="/js/clipboard.min.js?1726851028"></script>
+    <script src="/js/perfect-scrollbar.min.js?1726851028"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1726851028"></script>
+    <script src="/js/jquery.sticky.js?1726851028"></script>
+    <script src="/js/featherlight.min.js?1726851028"></script>
+    <script src="/js/highlight.pack.js?1726851028"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1726848624"></script>
-    <script src="/js/learn.js?1726848624"></script>
-    <script src="/js/hugo-learn.js?1726848624"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1726851028"></script>
+    <script src="/js/learn.js?1726851028"></script>
+    <script src="/js/hugo-learn.js?1726851028"></script>
 
-    <link href="/mermaid/mermaid.css?1726848624" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1726848624"></script>
+    <link href="/mermaid/mermaid.css?1726851028" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1726851028"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
