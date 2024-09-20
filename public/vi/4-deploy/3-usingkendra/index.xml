@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sử dụng Kendra với chỉ mục không phải tiếng Anh on Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS</title>
+    <title>Sử dụng Kendra với non-english index on Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS</title>
     <link>//localhost:1313/vi/4-deploy/3-usingkendra/</link>
-    <description>Recent content in Sử dụng Kendra với chỉ mục không phải tiếng Anh on Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS</description>
+    <description>Recent content in Sử dụng Kendra với non-english index on Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <atom:link href="//localhost:1313/vi/4-deploy/3-usingkendra/index.xml" rel="self" type="application/rss+xml" />

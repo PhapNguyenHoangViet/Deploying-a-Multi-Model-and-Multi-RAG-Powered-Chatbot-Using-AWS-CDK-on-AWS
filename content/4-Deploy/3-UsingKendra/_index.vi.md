@@ -1,12 +1,12 @@
 +++
-title = "Sử dụng Kendra với chỉ mục không phải tiếng Anh"
+title = "Sử dụng Kendra với non-english index"
 date = "`r Sys.Date()`"
 weight = 3
 chapter = false
 pre = "<b>4.3. </b>"
 +++
 
-### Sử dụng Kendra với chỉ mục không phải tiếng Anh
+### Sử dụng Kendra với non-english index
 
 Nếu bạn đang sử dụng Kendra với một chỉ mục bằng ngôn ngữ khác tiếng Anh, bạn sẽ cần thực hiện một số thay đổi trong mã.
 
