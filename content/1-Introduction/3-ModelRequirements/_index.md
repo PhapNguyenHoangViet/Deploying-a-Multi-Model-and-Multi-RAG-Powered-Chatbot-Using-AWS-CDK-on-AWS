@@ -6,13 +6,13 @@ chapter = false
 pre = "<b>1.3. </b>"
 +++
 
-#### **Amazon SageMaker requirements (for self-hosted models only)[](https://aws-samples.github.io/aws-genai-llm-chatbot/documentation/model-requirements.html#amazon-sagemaker-requirements-for-self-hosted-models-only)**
+#### Amazon SageMaker requirements (for self-hosted models only)[](https://aws-samples.github.io/aws-genai-llm-chatbot/documentation/model-requirements.html#amazon-sagemaker-requirements-for-self-hosted-models-only)
 
 **Instance type quota increase**
 
 If you are looking to self-host models on Amazon SageMaker, you'll likely need to request an increase in service quota for specific SageMaker instance types, such as the `ml.g5` instance type. This will give access to the latest generation of GPU/Multi-GPU instance types. [You can do this from the AWS console](https://console.aws.amazon.com/servicequotas/home/services/sagemaker/quotas)
 
-#### **Amazon Bedrock requirements[](https://aws-samples.github.io/aws-genai-llm-chatbot/documentation/model-requirements.html#amazon-bedrock-requirements)**
+#### Amazon Bedrock requirements[](https://aws-samples.github.io/aws-genai-llm-chatbot/documentation/model-requirements.html#amazon-bedrock-requirements)
 
 **Base Models Access**
 
@@ -52,6 +52,42 @@ You can deploy the solution to a different region from where you requested Base 
 
 ![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/008-3-modelrequirements.png?width=90pc)
 
+#### HuggingFace Authentication
+
+Some models hosted on HuggingFace require an API key for access, for example MistralAI and Meta models have now changed to be gated behind accepting their EULA
+
+If you wish to continue using these models or access other models on HuggingFace which require authentication you can now supply this HF token as part of the installer.
+
+When enabling sagemaker models in the installer it will now ask you for a Secrets Manager Secret ARN containing the HF API token.
+
+You can read more about setting up access tokens on the [HF website](https://huggingface.co/docs/hub/en/security-tokens) Once you've got a token you may need to also navigate to a models page such as mistral7B to accept their terms before you can then use your token to access the model.
+
+The secret you would create in secrets manager would be a plain text secret containing just the HF token itself.
+
+1. Sign Up or Log In to HuggingFace
+   - Visit [HuggingFace](https://huggingface.co/).
+   - If you don’t have an account, click **Sign Up**. If you already have an account, click **Login** and enter your credentials to **Log In**.
+
+2. Obtain API Access Tokens from HuggingFace
+   - After logging in, go to your **Profile** by clicking on your avatar in the top-right corner, then select **Settings**.
+   - On the left-hand menu, select **Access Tokens**.
+   - Here, you’ll see a button labeled **New Token**. Click this to create a new API access token.
+   - Name your access token and set the access level to **Read**, then click **Generate**.
+   - Copy the API access token, as you will need it in the next steps.
+
+3. Accept Model Usage Terms (if required)
+   - To access restricted models like **mistral7B** or Meta models, you need to accept the model’s **EULA**.
+   - Go to the model page you want to use (e.g., mistral7B).
+   - Scroll down to the **Model Card**, and if the model requires it, you will see a button to accept the terms and conditions.
+   - Click **Accept** to agree to the terms and allow your access token to access the model.
+     
+4. Create an API Secret in AWS Secrets Manager
+   - Go to **AWS Secrets Manager** in the AWS Management Console.
+   - Click **Store a new secret**.
+   - Choose **Other type of secrets** and enter your HuggingFace access token as plain text (**Plaintext**).
+   - Name the secret, for example, **HuggingFace-Token**, and store it.
+   - Save the **Secret ARN** from Secrets Manager, as you will use this ARN to provide the access token to **Amazon SageMaker**.
+
 
 #### Third-party models requirements
 
@@ -82,7 +118,7 @@ For example, if you wish to be able to interact with AI21 Labs., OpenAI's and Co
 In case of no keys needs, the secret value must be an empty JSON `{}`, NOT an empty string `''`.
 {{% /notice %}}
 
-make sure that the environment variable matches what is expected by the framework in use, like Langchain ([see available langchain integrations](https://python.langchain.com/docs/integrations/llms/)).
+Make sure that the environment variable matches what is expected by the framework in use, like Langchain ([see available langchain integrations](https://python.langchain.com/docs/integrations/llms/)).
 
 #### Azure OpenAI integration as third party model
 

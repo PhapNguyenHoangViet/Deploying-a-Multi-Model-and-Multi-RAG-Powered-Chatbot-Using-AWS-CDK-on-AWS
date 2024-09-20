@@ -50,6 +50,44 @@ Bạn có thể triển khai giải pháp ở một khu vực khác với nơi b
 
 ![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/008-3-modelrequirements.png?width=90pc)
 
+#### Xác thực HuggingFace
+
+Một số mô hình được lưu trữ trên HuggingFace yêu cầu khóa API để truy cập. Ví dụ, các mô hình từ MistralAI và Meta hiện đã yêu cầu bạn phải chấp nhận EULA của họ để có thể sử dụng.
+
+Nếu bạn muốn tiếp tục sử dụng các mô hình này hoặc truy cập các mô hình khác trên HuggingFace mà yêu cầu xác thực, bạn có thể cung cấp access tokens HF (HuggingFace) như một phần của trình cài đặt.
+
+Khi bạn kích hoạt các mô hình SageMaker trong trình cài đặt, nó sẽ yêu cầu bạn cung cấp ARN của bí mật trong AWS Secrets Manager chứa access tokens HF.
+
+Bạn có thể đọc thêm về cách thiết lập access tokens truy cập trên [trang web của HuggingFace](https://huggingface.co/docs/hub/en/security-tokens). Sau khi có access tokens, bạn có thể cần truy cập vào trang của mô hình, chẳng hạn như `mistral7B`, để chấp nhận các điều khoản trước khi sử dụng access tokens để truy cập mô hình.
+
+Bí mật bạn tạo trong Secrets Manager sẽ là một bí mật dạng văn bản thuần, chỉ chứa access tokens HF.
+
+Việc xác thực này là cần thiết để đảm bảo bạn có quyền truy cập vào các mô hình yêu cầu xác thực và để bảo vệ các điều khoản sử dụng của nhà cung cấp mô hình.
+
+1. Đăng ký hoặc Đăng nhập tài khoản HuggingFace
+   - Truy cập [HuggingFace](https://huggingface.co/).
+   - Nếu bạn chưa có tài khoản, hãy Đăng ký bằng cách bấm vào nút "Sign Up". Nếu đã có tài khoản, hãy bấm vào "Login" và nhập thông tin để Đăng nhập.
+
+2. Lấy access tokens API từ HuggingFace
+   - Sau khi đăng nhập, vào Trang cá nhân bằng cách nhấp vào ảnh đại diện của bạn ở góc trên bên phải, sau đó chọn Settings (Cài đặt).
+   - Ở cột bên trái, chọn Access Tokens (Mã truy cập).
+   Tại đây, bạn sẽ thấy một nút New Token (Tạo mã mới). Bấm vào nút này để tạo access tokens truy cập API mới.
+   - Đặt tên cho access tokens của bạn và chọn quyền truy cập là Read (Chỉ đọc), sau đó bấm Generate (Tạo mã).
+   - Sao chép access tokens API này, vì bạn sẽ cần sử dụng nó ở các bước tiếp theo.
+
+3. Chấp nhận Điều khoản sử dụng Mô hình (nếu có)
+   - Để sử dụng các mô hình bị hạn chế như mistral7B hoặc các mô hình Meta, bạn cần chấp nhận EULA của mô hình.
+   - Truy cập vào trang mô hình mà bạn muốn sử dụng (ví dụ: mistral7B).
+   - Cuộn xuống phần Model Card và nếu mô hình yêu cầu, bạn sẽ thấy một nút để chấp nhận các điều khoản và điều kiện.
+   - Bấm vào nút Accept để chấp nhận các điều khoản và cho phép access tokens của bạn truy cập vào mô hình.
+     
+4. Tạo Bí mật API trong AWS Secrets Manager
+   - Truy cập AWS Secrets Manager trong bảng điều khiển AWS.
+   - Nhấn Store a new secret (Lưu trữ bí mật mới).
+   - Chọn Other type of secrets (Loại bí mật khác) và nhập access tokens HF của bạn vào dưới dạng văn bản thuần (Plaintext).
+   - Đặt tên cho bí mật, ví dụ: HuggingFace-Token và lưu trữ nó.
+   - Lưu lại ARN bí mật từ Secrets Manager vì bạn sẽ sử dụng ARN này để cung cấp access tokens cho Amazon SageMaker.
+
 
 #### Yêu cầu cho mô hình của bên thứ ba
 

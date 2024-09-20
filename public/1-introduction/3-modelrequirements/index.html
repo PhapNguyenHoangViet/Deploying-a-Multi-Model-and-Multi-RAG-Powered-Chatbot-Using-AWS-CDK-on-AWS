@@ -12,21 +12,21 @@
     <title>Model Requirements :: Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS</title>
 
     
-    <link href="/css/nucleus.css?1726851028" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1726851028" rel="stylesheet">
-    <link href="/css/hybrid.css?1726851028" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1726851028" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1726851028" rel="stylesheet">
-    <link href="/css/auto-complete.css?1726851028" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1726851028" rel="stylesheet">
-    <link href="/css/theme.css?1726851028" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1726851028" rel="stylesheet">
+    <link href="/css/nucleus.css?1726859728" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1726859728" rel="stylesheet">
+    <link href="/css/hybrid.css?1726859728" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1726859728" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1726859728" rel="stylesheet">
+    <link href="/css/auto-complete.css?1726859728" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1726859728" rel="stylesheet">
+    <link href="/css/theme.css?1726859728" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1726859728" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1726851028" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1726859728" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1726851028"></script>
+    <script src="/js/jquery-3.3.1.min.js?1726859728"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1726851028"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1726851028"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1726859728"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1726859728"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1726851028"></script>
+<script type="text/javascript" src="/js/search.js?1726859728"></script>
 
     
   </div>
@@ -1089,10 +1089,10 @@
 
 
 
-	<h4 id="amazon-sagemaker-requirements-for-self-hosted-models-onlyhttpsaws-samplesgithubioaws-genai-llm-chatbotdocumentationmodel-requirementshtmlamazon-sagemaker-requirements-for-self-hosted-models-only"><strong>Amazon SageMaker requirements (for self-hosted models only)<a href="https://aws-samples.github.io/aws-genai-llm-chatbot/documentation/model-requirements.html#amazon-sagemaker-requirements-for-self-hosted-models-only"></a></strong></h4>
+	<h4 id="amazon-sagemaker-requirements-for-self-hosted-models-onlyhttpsaws-samplesgithubioaws-genai-llm-chatbotdocumentationmodel-requirementshtmlamazon-sagemaker-requirements-for-self-hosted-models-only">Amazon SageMaker requirements (for self-hosted models only)<a href="https://aws-samples.github.io/aws-genai-llm-chatbot/documentation/model-requirements.html#amazon-sagemaker-requirements-for-self-hosted-models-only"></a></h4>
 <p><strong>Instance type quota increase</strong></p>
 <p>If you are looking to self-host models on Amazon SageMaker, you&rsquo;ll likely need to request an increase in service quota for specific SageMaker instance types, such as the <code>ml.g5</code> instance type. This will give access to the latest generation of GPU/Multi-GPU instance types. <a href="https://console.aws.amazon.com/servicequotas/home/services/sagemaker/quotas">You can do this from the AWS console</a></p>
-<h4 id="amazon-bedrock-requirementshttpsaws-samplesgithubioaws-genai-llm-chatbotdocumentationmodel-requirementshtmlamazon-bedrock-requirements"><strong>Amazon Bedrock requirements<a href="https://aws-samples.github.io/aws-genai-llm-chatbot/documentation/model-requirements.html#amazon-bedrock-requirements"></a></strong></h4>
+<h4 id="amazon-bedrock-requirementshttpsaws-samplesgithubioaws-genai-llm-chatbotdocumentationmodel-requirementshtmlamazon-bedrock-requirements">Amazon Bedrock requirements<a href="https://aws-samples.github.io/aws-genai-llm-chatbot/documentation/model-requirements.html#amazon-bedrock-requirements"></a></h4>
 <p><strong>Base Models Access</strong></p>
 <p>If you are looking to interact with models from Amazon Bedrock, you need to <a href="https://console.aws.amazon.com/bedrock/home?#/modelaccess">request access to the base models in one of the regions where Amazon Bedrock is available</a>. Make sure to read and accept models&rsquo; end-user license agreements or EULA.</p>
 
@@ -1127,6 +1127,50 @@
 <p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/006-3-modelrequirements.png?width=90pc"></p>
 <p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/007-3-modelrequirements.png?width=90pc"></p>
 <p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/008-3-modelrequirements.png?width=90pc"></p>
+<h4 id="huggingface-authentication">HuggingFace Authentication</h4>
+<p>Some models hosted on HuggingFace require an API key for access, for example MistralAI and Meta models have now changed to be gated behind accepting their EULA</p>
+<p>If you wish to continue using these models or access other models on HuggingFace which require authentication you can now supply this HF token as part of the installer.</p>
+<p>When enabling sagemaker models in the installer it will now ask you for a Secrets Manager Secret ARN containing the HF API token.</p>
+<p>You can read more about setting up access tokens on the <a href="https://huggingface.co/docs/hub/en/security-tokens">HF website</a> Once you&rsquo;ve got a token you may need to also navigate to a models page such as mistral7B to accept their terms before you can then use your token to access the model.</p>
+<p>The secret you would create in secrets manager would be a plain text secret containing just the HF token itself.</p>
+<ol>
+<li>
+<p>Sign Up or Log In to HuggingFace</p>
+<ul>
+<li>Visit <a href="https://huggingface.co/">HuggingFace</a>.</li>
+<li>If you don’t have an account, click <strong>Sign Up</strong>. If you already have an account, click <strong>Login</strong> and enter your credentials to <strong>Log In</strong>.</li>
+</ul>
+</li>
+<li>
+<p>Obtain API Access Tokens from HuggingFace</p>
+<ul>
+<li>After logging in, go to your <strong>Profile</strong> by clicking on your avatar in the top-right corner, then select <strong>Settings</strong>.</li>
+<li>On the left-hand menu, select <strong>Access Tokens</strong>.</li>
+<li>Here, you’ll see a button labeled <strong>New Token</strong>. Click this to create a new API access token.</li>
+<li>Name your access token and set the access level to <strong>Read</strong>, then click <strong>Generate</strong>.</li>
+<li>Copy the API access token, as you will need it in the next steps.</li>
+</ul>
+</li>
+<li>
+<p>Accept Model Usage Terms (if required)</p>
+<ul>
+<li>To access restricted models like <strong>mistral7B</strong> or Meta models, you need to accept the model’s <strong>EULA</strong>.</li>
+<li>Go to the model page you want to use (e.g., mistral7B).</li>
+<li>Scroll down to the <strong>Model Card</strong>, and if the model requires it, you will see a button to accept the terms and conditions.</li>
+<li>Click <strong>Accept</strong> to agree to the terms and allow your access token to access the model.</li>
+</ul>
+</li>
+<li>
+<p>Create an API Secret in AWS Secrets Manager</p>
+<ul>
+<li>Go to <strong>AWS Secrets Manager</strong> in the AWS Management Console.</li>
+<li>Click <strong>Store a new secret</strong>.</li>
+<li>Choose <strong>Other type of secrets</strong> and enter your HuggingFace access token as plain text (<strong>Plaintext</strong>).</li>
+<li>Name the secret, for example, <strong>HuggingFace-Token</strong>, and store it.</li>
+<li>Save the <strong>Secret ARN</strong> from Secrets Manager, as you will use this ARN to provide the access token to <strong>Amazon SageMaker</strong>.</li>
+</ul>
+</li>
+</ol>
 <h4 id="third-party-models-requirements">Third-party models requirements</h4>
 <p>You can also interact with external providers via their API, such as AI21 Labs, Cohere, OpenAI, etc.</p>
 <p>The provider must be supported in the <a href="https://github.com/aws-samples/aws-genai-llm-chatbot/blob/main/lib/model-interfaces/langchain/functions/request-handler/index.py">Model Interface</a>, <a href="https://python.langchain.com/docs/integrations/llms/">see available langchain integrations</a> for a comprehensive list of providers.</p>
@@ -1146,7 +1190,7 @@
 <div class="notices note" ><p>In case of no keys needs, the secret value must be an empty JSON <code>{}</code>, NOT an empty string <code>''</code>.</p>
 </div>
 
-<p>make sure that the environment variable matches what is expected by the framework in use, like Langchain (<a href="https://python.langchain.com/docs/integrations/llms/">see available langchain integrations</a>).</p>
+<p>Make sure that the environment variable matches what is expected by the framework in use, like Langchain (<a href="https://python.langchain.com/docs/integrations/llms/">see available langchain integrations</a>).</p>
 <h4 id="azure-openai-integration-as-third-party-model">Azure OpenAI integration as third party model</h4>
 <ul>
 <li>Open the SharedApiKeysSecretxyz in SecretManager</li>
@@ -1697,19 +1741,19 @@ For each one, we need to define following infos you will retrieve from your Azur
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1726851028"></script>
-    <script src="/js/perfect-scrollbar.min.js?1726851028"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1726851028"></script>
-    <script src="/js/jquery.sticky.js?1726851028"></script>
-    <script src="/js/featherlight.min.js?1726851028"></script>
-    <script src="/js/highlight.pack.js?1726851028"></script>
+    <script src="/js/clipboard.min.js?1726859728"></script>
+    <script src="/js/perfect-scrollbar.min.js?1726859728"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1726859728"></script>
+    <script src="/js/jquery.sticky.js?1726859728"></script>
+    <script src="/js/featherlight.min.js?1726859728"></script>
+    <script src="/js/highlight.pack.js?1726859728"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1726851028"></script>
-    <script src="/js/learn.js?1726851028"></script>
-    <script src="/js/hugo-learn.js?1726851028"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1726859728"></script>
+    <script src="/js/learn.js?1726859728"></script>
+    <script src="/js/hugo-learn.js?1726859728"></script>
 
-    <link href="/mermaid/mermaid.css?1726851028" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1726851028"></script>
+    <link href="/mermaid/mermaid.css?1726859728" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1726859728"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -12,21 +12,21 @@
     <title>Yêu cầu về Mô hình :: Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS</title>
 
     
-    <link href="/css/nucleus.css?1726851028" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1726851028" rel="stylesheet">
-    <link href="/css/hybrid.css?1726851028" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1726851028" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1726851028" rel="stylesheet">
-    <link href="/css/auto-complete.css?1726851028" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1726851028" rel="stylesheet">
-    <link href="/css/theme.css?1726851028" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1726851028" rel="stylesheet">
+    <link href="/css/nucleus.css?1726859728" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1726859728" rel="stylesheet">
+    <link href="/css/hybrid.css?1726859728" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1726859728" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1726859728" rel="stylesheet">
+    <link href="/css/auto-complete.css?1726859728" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1726859728" rel="stylesheet">
+    <link href="/css/theme.css?1726859728" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1726859728" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1726851028" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1726859728" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1726851028"></script>
+    <script src="/js/jquery-3.3.1.min.js?1726859728"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1726851028"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1726851028"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1726859728"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1726859728"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1726851028"></script>
+<script type="text/javascript" src="/js/search.js?1726859728"></script>
 
     
   </div>
@@ -1124,6 +1124,51 @@
 <p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/006-3-modelrequirements.png?width=90pc"></p>
 <p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/007-3-modelrequirements.png?width=90pc"></p>
 <p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/008-3-modelrequirements.png?width=90pc"></p>
+<h4 id="xác-thực-huggingface">Xác thực HuggingFace</h4>
+<p>Một số mô hình được lưu trữ trên HuggingFace yêu cầu khóa API để truy cập. Ví dụ, các mô hình từ MistralAI và Meta hiện đã yêu cầu bạn phải chấp nhận EULA của họ để có thể sử dụng.</p>
+<p>Nếu bạn muốn tiếp tục sử dụng các mô hình này hoặc truy cập các mô hình khác trên HuggingFace mà yêu cầu xác thực, bạn có thể cung cấp access tokens HF (HuggingFace) như một phần của trình cài đặt.</p>
+<p>Khi bạn kích hoạt các mô hình SageMaker trong trình cài đặt, nó sẽ yêu cầu bạn cung cấp ARN của bí mật trong AWS Secrets Manager chứa access tokens HF.</p>
+<p>Bạn có thể đọc thêm về cách thiết lập access tokens truy cập trên <a href="https://huggingface.co/docs/hub/en/security-tokens">trang web của HuggingFace</a>. Sau khi có access tokens, bạn có thể cần truy cập vào trang của mô hình, chẳng hạn như <code>mistral7B</code>, để chấp nhận các điều khoản trước khi sử dụng access tokens để truy cập mô hình.</p>
+<p>Bí mật bạn tạo trong Secrets Manager sẽ là một bí mật dạng văn bản thuần, chỉ chứa access tokens HF.</p>
+<p>Việc xác thực này là cần thiết để đảm bảo bạn có quyền truy cập vào các mô hình yêu cầu xác thực và để bảo vệ các điều khoản sử dụng của nhà cung cấp mô hình.</p>
+<ol>
+<li>
+<p>Đăng ký hoặc Đăng nhập tài khoản HuggingFace</p>
+<ul>
+<li>Truy cập <a href="https://huggingface.co/">HuggingFace</a>.</li>
+<li>Nếu bạn chưa có tài khoản, hãy Đăng ký bằng cách bấm vào nút &ldquo;Sign Up&rdquo;. Nếu đã có tài khoản, hãy bấm vào &ldquo;Login&rdquo; và nhập thông tin để Đăng nhập.</li>
+</ul>
+</li>
+<li>
+<p>Lấy access tokens API từ HuggingFace</p>
+<ul>
+<li>Sau khi đăng nhập, vào Trang cá nhân bằng cách nhấp vào ảnh đại diện của bạn ở góc trên bên phải, sau đó chọn Settings (Cài đặt).</li>
+<li>Ở cột bên trái, chọn Access Tokens (Mã truy cập).
+Tại đây, bạn sẽ thấy một nút New Token (Tạo mã mới). Bấm vào nút này để tạo access tokens truy cập API mới.</li>
+<li>Đặt tên cho access tokens của bạn và chọn quyền truy cập là Read (Chỉ đọc), sau đó bấm Generate (Tạo mã).</li>
+<li>Sao chép access tokens API này, vì bạn sẽ cần sử dụng nó ở các bước tiếp theo.</li>
+</ul>
+</li>
+<li>
+<p>Chấp nhận Điều khoản sử dụng Mô hình (nếu có)</p>
+<ul>
+<li>Để sử dụng các mô hình bị hạn chế như mistral7B hoặc các mô hình Meta, bạn cần chấp nhận EULA của mô hình.</li>
+<li>Truy cập vào trang mô hình mà bạn muốn sử dụng (ví dụ: mistral7B).</li>
+<li>Cuộn xuống phần Model Card và nếu mô hình yêu cầu, bạn sẽ thấy một nút để chấp nhận các điều khoản và điều kiện.</li>
+<li>Bấm vào nút Accept để chấp nhận các điều khoản và cho phép access tokens của bạn truy cập vào mô hình.</li>
+</ul>
+</li>
+<li>
+<p>Tạo Bí mật API trong AWS Secrets Manager</p>
+<ul>
+<li>Truy cập AWS Secrets Manager trong bảng điều khiển AWS.</li>
+<li>Nhấn Store a new secret (Lưu trữ bí mật mới).</li>
+<li>Chọn Other type of secrets (Loại bí mật khác) và nhập access tokens HF của bạn vào dưới dạng văn bản thuần (Plaintext).</li>
+<li>Đặt tên cho bí mật, ví dụ: HuggingFace-Token và lưu trữ nó.</li>
+<li>Lưu lại ARN bí mật từ Secrets Manager vì bạn sẽ sử dụng ARN này để cung cấp access tokens cho Amazon SageMaker.</li>
+</ul>
+</li>
+</ol>
 <h4 id="yêu-cầu-cho-mô-hình-của-bên-thứ-ba">Yêu cầu cho mô hình của bên thứ ba</h4>
 <p>Bạn cũng có thể tương tác với các nhà cung cấp bên ngoài thông qua API của họ, chẳng hạn như AI21 Labs, Cohere, OpenAI,&hellip;</p>
 <p>Nhà cung cấp phải được hỗ trợ trong <a href="https://github.com/aws-samples/aws-genai-llm-chatbot/blob/main/lib/model-interfaces/langchain/functions/request-handler/index.py">Model Interface</a>, <a href="https://python.langchain.com/docs/integrations/llms/"> xem danh sách tích hợp langchain có sẵn</a> để biết danh sách toàn diện các nhà cung cấp.</p>
@@ -1693,19 +1738,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1726851028"></script>
-    <script src="/js/perfect-scrollbar.min.js?1726851028"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1726851028"></script>
-    <script src="/js/jquery.sticky.js?1726851028"></script>
-    <script src="/js/featherlight.min.js?1726851028"></script>
-    <script src="/js/highlight.pack.js?1726851028"></script>
+    <script src="/js/clipboard.min.js?1726859728"></script>
+    <script src="/js/perfect-scrollbar.min.js?1726859728"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1726859728"></script>
+    <script src="/js/jquery.sticky.js?1726859728"></script>
+    <script src="/js/featherlight.min.js?1726859728"></script>
+    <script src="/js/highlight.pack.js?1726859728"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1726851028"></script>
-    <script src="/js/learn.js?1726851028"></script>
-    <script src="/js/hugo-learn.js?1726851028"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1726859728"></script>
+    <script src="/js/learn.js?1726859728"></script>
+    <script src="/js/hugo-learn.js?1726859728"></script>
 
-    <link href="/mermaid/mermaid.css?1726851028" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1726851028"></script>
+    <link href="/mermaid/mermaid.css?1726859728" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1726859728"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
