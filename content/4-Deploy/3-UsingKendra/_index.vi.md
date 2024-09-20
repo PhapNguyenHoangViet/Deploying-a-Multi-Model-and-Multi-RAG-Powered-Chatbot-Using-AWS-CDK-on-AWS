@@ -8,7 +8,7 @@ pre = "<b>4.3. </b>"
 
 ### Sử dụng Kendra với non-english index
 
-Nếu bạn đang sử dụng Kendra với một chỉ mục bằng ngôn ngữ khác tiếng Anh, bạn sẽ cần thực hiện một số thay đổi trong mã.
+Nếu bạn đang sử dụng Kendra với non-english index, bạn sẽ cần thực hiện một số thay đổi trong mã.
 
 Bạn cần sửa đổi các bộ lọc trong tệp `lib/shared/layers/python-sdk/python/genai_core/kendra/query.py`.
 
