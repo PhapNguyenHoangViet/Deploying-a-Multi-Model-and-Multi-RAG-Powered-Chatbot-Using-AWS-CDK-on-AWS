@@ -78,30 +78,6 @@
                 href="//localhost:1313/vi/3-setupproject/1-folkrepository/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-setupproject/2-installnotejs/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-setupproject/2-installnotejs/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-setupproject/2-installnotejs/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/3-setupproject/3-installdocker/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-setupproject/3-installdocker/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-setupproject/3-installdocker/"
-                />
-  </url><url>
     <loc>//localhost:1313/vi/2-preparation-steps/1-creatingiamuser/</loc>
     <xhtml:link
                 rel="alternate"
@@ -151,6 +127,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="//localhost:1313/vi/1-introduction/2-awsresourcesdeployed/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/3-setupproject/2-installnotejs/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-setupproject/2-installnotejs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-setupproject/2-installnotejs/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/4-deploy/2-runuserinterfacelocally/</loc>
@@ -214,6 +202,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="//localhost:1313/vi/1-introduction/3-modelrequirements/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/3-setupproject/3-installdocker/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-setupproject/3-installdocker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-setupproject/3-installdocker/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/4-deploy/3-usingkendra/</loc>

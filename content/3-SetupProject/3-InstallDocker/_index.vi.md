@@ -1,27 +1,62 @@
 +++
-title = "Folk repository"
+title = "Cài đặt Docker"
 date = "`r Sys.Date()`"
-weight = 1
+weight = 3
 chapter = false
-pre = "<b>3.1. </b>"
+pre = "<b>3.3. </b>"
 +++
 
-### Tạo repository trên GitHub
+1. **Cập nhật danh sách gói** trên hệ thống của bạn.
 
-1. Đăng nhập vào GitHub
-   - Đăng nhập [Github](https://github.com/)
-   - Trong repository, [aws-genai-llm-chatbot](https://github.com/aws-samples/aws-genai-llm-chatbot)
+```
+sudo apt-get update
+```
 
-![folkrepository](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/1-folkrepository/001-1-folkrepository.png?width=90pc)
+![installdocker](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/001-3-installdocker.png?width=90pc)
 
-2. Fork repository
+2. Cài đặt **Docker**.
+```
+sudo apt-get install -y docker.io
+```
 
-![folkrepository](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/1-folkrepository/002-1-folkrepository.png?width=90pc)
+![installdocker](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/002-3-installdocker.png?width=90pc)
 
-3. Trên màn hình, nhấn nút **Fork** và điền các thông tin cần thiết.
+3. Khởi động **Docker service** and **enables Docker** khởi động tự động khi khởi động hệ thống.
+```
+sudo systemctl start docker
+sudo systemctl enable docker
+```
 
-![folkrepository](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/1-folkrepository/003-1-folkrepository.png?width=90pc)
+![installdocker](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/003-3-installdocker.png?width=90pc)
 
-4. Sau đó, nhấn **Create fork**, và bây giờ bạn đã có một bản sao của dự án này trong tài khoản GitHub của mình.
+4. Thêm người dùng của bạn vào nhóm Docker để có thể chạy các lệnh Docker mà không cần `sudo`.
+```
+sudo usermod -aG docker $USER
+```
 
-![folkrepository](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/1-folkrepository/004-1-folkrepository.png?width=90pc)
+![installdocker](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/004-3-installdocker.png?width=90pc)
+
+5. Hiển thị phiên bản **Docker** đã cài đặt.
+```
+docker --version
+```
+
+![installdocker](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/005-3-installdocker.png?width=90pc)
+
+6. Cập nhật nhóm hiện tại của người dùng để áp dụng thay đổi.
+```
+newgrp docker
+groups $USER
+ls -l /var/run/docker.sock
+```
+
+![installdocker](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/006-3-installdocker.png?width=90pc)
+
+7. Thiết lập quyền trên tệp socket Docker.
+```
+sudo chmod 660 /var/run/docker.sock
+```
+
+![installdocker](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/007-3-installdocker.png?width=90pc)
+
+

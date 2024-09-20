@@ -129,18 +129,6 @@
                 href="//localhost:1313/2-preparation-steps/"
                 />
   </url><url>
-    <loc>//localhost:1313/3-setupproject/2-installnotejs/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-setupproject/2-installnotejs/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-setupproject/2-installnotejs/"
-                />
-  </url><url>
     <loc>//localhost:1313/2-preparation-steps/2-creatingvpc/</loc>
     <xhtml:link
                 rel="alternate"
@@ -151,6 +139,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="//localhost:1313/2-preparation-steps/2-creatingvpc/"
+                />
+  </url><url>
+    <loc>//localhost:1313/3-setupproject/2-installnotejs/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-setupproject/2-installnotejs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-setupproject/2-installnotejs/"
                 />
   </url><url>
     <loc>//localhost:1313/4-deploy/2-runuserinterfacelocally/</loc>

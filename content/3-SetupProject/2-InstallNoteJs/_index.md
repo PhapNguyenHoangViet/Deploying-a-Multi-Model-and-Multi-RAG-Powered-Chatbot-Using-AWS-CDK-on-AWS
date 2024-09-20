@@ -1,64 +1,57 @@
-+++  
-title = "Cài Đặt NodeJs"  
-date = "`r Sys.Date()`"  
-weight = 2  
-chapter = false  
-pre = "<b>3.2. </b>"  
-+++  
++++
+title = "Install NodeJs"
+date = "r Sys.Date()"
+weight = 2
+chapter = false
+pre = "<b>3.2. </b>"
++++
 
-1. **Cập nhật** danh sách gói trên hệ thống của bạn.
+1. **Updates** the package list on your system.
 
-```
 sudo apt update
-```
-- Lệnh này cập nhật danh sách các gói có sẵn và phiên bản của chúng trên hệ thống của bạn. Nó không cài đặt hay nâng cấp bất kỳ gói nào; chỉ làm mới chỉ mục gói.
 
-![installnodejs](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/2-installnodejs/001-2-installnodejs.png?width=90pc)
+- This command updates the list of available packages and their versions on your system. It doesn’t install or upgrade any packages; it just refreshes the package index.
+
+![installnodejs](/images/3-setupproject/2-installnodejs/001-2-installnodejs.png?width=90pc)
 
 
 
-2. Tải xuống và cài đặt **NVM** **(Node Version Manager)**.
-```
+2. Downloads and installs **NVM** **(Node Version Manager)**.
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
-```
-- Lệnh này tải xuống và chạy script cài đặt NVM (Node Version Manager) từ GitHub. curl lấy script, và phần | bash chuyển nó tới bash shell để thực thi. NVM cho phép bạn quản lý nhiều phiên bản Node.js trên hệ thống của mình.
+
+- This command downloads and runs the NVM (Node Version Manager) installation script from GitHub. curl fetches the script, and the | bash part pipes it to the bash shell for execution. NVM allows you to manage multiple versions of Node.js on your system.
 
 
-![installnodejs](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/2-installnodejs/002-2-installnodejs.png?width=90pc)
+![installnodejs](/images/3-setupproject/2-installnodejs/002-2-installnodejs.png?width=90pc)
 
-3. Áp dụng các thay đổi do **NVM** thực hiện vào phiên làm việc hiện tại của shell.
-```
+3. Applies the changes made by **NVM** to your current shell session.
 source ~/bashrc
-```
-- Lệnh này tải lại tệp .bashrc trong thư mục home của bạn để áp dụng các thay đổi được thực hiện bởi script cài đặt NVM. Nó đảm bảo rằng các lệnh của NVM có sẵn trong phiên shell hiện tại của bạn.
 
-- Kiểm tra phiên bản của NVM đã được cài đặt.
-```
+- This command reloads the .bashrc file in your home directory to apply the changes made by the NVM installation script. It ensures that NVM commands are available in your current shell session.
+
+- Checks the installed version of **NVM**.
 nvm --version
-```
-   - Lệnh này kiểm tra và hiển thị phiên bản của NVM để xác minh rằng nó đã được cài đặt đúng cách.
 
-![installnodejs](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/2-installnodejs/003-2-installnodejs.png?width=90pc)
+   - This command checks and displays the installed version of NVM to verify that it has been installed correctly.
 
-4. Cài đặt **Node.js** phiên bản 18 bằng NVM
-```
+![installnodejs](/images/3-setupproject/2-installnodejs/003-2-installnodejs.png?width=90pc)
+
+4. Installs **Node.js** version 18 using NVM.
 nvm install 18
-```
-- Cài đặt Node.js phiên bản 18 bằng NVM. Bạn có thể cài đặt và quản lý nhiều phiên bản Node.js khác nhau với NVM.
 
-![installnodejs](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/2-installnodejs/004-2-installnodejs.png?width=90pc)
+- Installs Node.js version 18 using NVM. You can install and manage different versions of Node.js with NVM.
 
-5. Hiển thị **the version of NodeJs and the version of npm**.
-```
+![installnodejs](/images/3-setupproject/2-installnodejs/004-2-installnodejs.png?width=90pc)
+
+5. Displays **the version of NodeJs and the version of npm**.
 node -v
 npm -v
-```
 
-![installnodejs](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/2-installnodejs/005-2-installnodejs.png?width=90pc)
 
-6. **Cập nhật**
-```
+![installnodejs](/images/3-setupproject/2-installnodejs/005-2-installnodejs.png?width=90pc)
+
+6. **Updates** the package list again.
 sudo apt update
-```
 
-![installnodejs](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/2-installnodejs/006-2-installnodejs.png?width=90pc)
+
+![installnodejs](/images/3-setupproject/2-installnodejs/006-2-installnodejs.png?width=90pc)

@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Folk repository :: Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS</title>
+    <title>Cài đặt Docker :: Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS</title>
 
     
-    <link href="/css/nucleus.css?1726848347" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1726848347" rel="stylesheet">
-    <link href="/css/hybrid.css?1726848347" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1726848347" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1726848347" rel="stylesheet">
-    <link href="/css/auto-complete.css?1726848347" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1726848347" rel="stylesheet">
-    <link href="/css/theme.css?1726848347" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1726848347" rel="stylesheet">
+    <link href="/css/nucleus.css?1726848624" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1726848624" rel="stylesheet">
+    <link href="/css/hybrid.css?1726848624" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1726848624" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1726848624" rel="stylesheet">
+    <link href="/css/auto-complete.css?1726848624" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1726848624" rel="stylesheet">
+    <link href="/css/theme.css?1726848624" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1726848624" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1726848347" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1726848624" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1726848347"></script>
+    <script src="/js/jquery-3.3.1.min.js?1726848624"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1726848347"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1726848347"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1726848624"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1726848624"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1726848347"></script>
+<script type="text/javascript" src="/js/search.js?1726848624"></script>
 
     
   </div>
@@ -441,13 +441,13 @@
  
   
     
-    <li data-nav-id="/vi/3-setupproject/2-installnotejs/" title="Folk repository" class="dd-item 
+    <li data-nav-id="/vi/3-setupproject/2-installnotejs/" title="Cài Đặt NodeJs" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-setupproject/2-installnotejs/">
-          <b>3.1. </b>Folk repository
+          <b>3.2. </b>Cài Đặt NodeJs
           
             <i class="fas fa-check read-icon"></i>
           
@@ -469,13 +469,13 @@
  
   
     
-    <li data-nav-id="/vi/3-setupproject/3-installdocker/" title="Folk repository" class="dd-item 
+    <li data-nav-id="/vi/3-setupproject/3-installdocker/" title="Cài đặt Docker" class="dd-item 
         
         active
         
         ">
       <a href="/vi/3-setupproject/3-installdocker/">
-          <b>3.1. </b>Folk repository
+          <b>3.3. </b>Cài đặt Docker
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1044,7 +1044,7 @@
             
           
           
-            <a href='/vi/'>Triển khai Multi-Model and Multi-RAG Powered Chatbot sử dụng AWS CDK trên AWS</a> > <a href='/vi/3-setupproject/'>Thiết lập dự án</a> > Folk repository
+            <a href='/vi/'>Triển khai Multi-Model and Multi-RAG Powered Chatbot sử dụng AWS CDK trên AWS</a> > <a href='/vi/3-setupproject/'>Thiết lập dự án</a> > Cài đặt Docker
           
         
           
@@ -1057,15 +1057,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#tạo-repository-trên-github">Tạo repository trên GitHub</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1081,7 +1073,7 @@
           
             <h1>
               
-              Folk repository
+              Cài đặt Docker
             </h1>
           
 
@@ -1089,28 +1081,44 @@
 
 
 
-	<h3 id="tạo-repository-trên-github">Tạo repository trên GitHub</h3>
-<ol>
-<li>Đăng nhập vào GitHub
-<ul>
-<li>Đăng nhập <a href="https://github.com/">Github</a></li>
-<li>Trong repository, <a href="https://github.com/aws-samples/aws-genai-llm-chatbot">aws-genai-llm-chatbot</a></li>
-</ul>
-</li>
+	<ol>
+<li><strong>Cập nhật danh sách gói</strong> trên hệ thống của bạn.</li>
 </ol>
-<p><img alt="folkrepository" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/1-folkrepository/001-1-folkrepository.png?width=90pc"></p>
+<pre tabindex="0"><code>sudo apt-get update
+</code></pre><p><img alt="installdocker" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/001-3-installdocker.png?width=90pc"></p>
 <ol start="2">
-<li>Fork repository</li>
+<li>Cài đặt <strong>Docker</strong>.</li>
 </ol>
-<p><img alt="folkrepository" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/1-folkrepository/002-1-folkrepository.png?width=90pc"></p>
+<pre tabindex="0"><code>sudo apt-get install -y docker.io
+</code></pre><p><img alt="installdocker" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/002-3-installdocker.png?width=90pc"></p>
 <ol start="3">
-<li>Trên màn hình, nhấn nút <strong>Fork</strong> và điền các thông tin cần thiết.</li>
+<li>Khởi động <strong>Docker service</strong> and <strong>enables Docker</strong> khởi động tự động khi khởi động hệ thống.</li>
 </ol>
-<p><img alt="folkrepository" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/1-folkrepository/003-1-folkrepository.png?width=90pc"></p>
+<pre tabindex="0"><code>sudo systemctl start docker
+sudo systemctl enable docker
+</code></pre><p><img alt="installdocker" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/003-3-installdocker.png?width=90pc"></p>
 <ol start="4">
-<li>Sau đó, nhấn <strong>Create fork</strong>, và bây giờ bạn đã có một bản sao của dự án này trong tài khoản GitHub của mình.</li>
+<li>Thêm người dùng của bạn vào nhóm Docker để có thể chạy các lệnh Docker mà không cần <code>sudo</code>.</li>
 </ol>
-<p><img alt="folkrepository" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/1-folkrepository/004-1-folkrepository.png?width=90pc"></p>
+<pre tabindex="0"><code>sudo usermod -aG docker $USER
+</code></pre><p><img alt="installdocker" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/004-3-installdocker.png?width=90pc"></p>
+<ol start="5">
+<li>Hiển thị phiên bản <strong>Docker</strong> đã cài đặt.</li>
+</ol>
+<pre tabindex="0"><code>docker --version
+</code></pre><p><img alt="installdocker" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/005-3-installdocker.png?width=90pc"></p>
+<ol start="6">
+<li>Cập nhật nhóm hiện tại của người dùng để áp dụng thay đổi.</li>
+</ol>
+<pre tabindex="0"><code>newgrp docker
+groups $USER
+ls -l /var/run/docker.sock
+</code></pre><p><img alt="installdocker" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/006-3-installdocker.png?width=90pc"></p>
+<ol start="7">
+<li>Thiết lập quyền trên tệp socket Docker.</li>
+</ol>
+<pre tabindex="0"><code>sudo chmod 660 /var/run/docker.sock
+</code></pre><p><img alt="installdocker" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/007-3-installdocker.png?width=90pc"></p>
 
 
 
@@ -1624,7 +1632,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/3-setupproject/2-installnotejs/" title="Folk repository"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/3-setupproject/2-installnotejs/" title="Cài Đặt NodeJs"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/vi/4-deploy/" title="Triển Khai Chatbot" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -1637,19 +1645,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1726848347"></script>
-    <script src="/js/perfect-scrollbar.min.js?1726848347"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1726848347"></script>
-    <script src="/js/jquery.sticky.js?1726848347"></script>
-    <script src="/js/featherlight.min.js?1726848347"></script>
-    <script src="/js/highlight.pack.js?1726848347"></script>
+    <script src="/js/clipboard.min.js?1726848624"></script>
+    <script src="/js/perfect-scrollbar.min.js?1726848624"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1726848624"></script>
+    <script src="/js/jquery.sticky.js?1726848624"></script>
+    <script src="/js/featherlight.min.js?1726848624"></script>
+    <script src="/js/highlight.pack.js?1726848624"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1726848347"></script>
-    <script src="/js/learn.js?1726848347"></script>
-    <script src="/js/hugo-learn.js?1726848347"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1726848624"></script>
+    <script src="/js/learn.js?1726848624"></script>
+    <script src="/js/hugo-learn.js?1726848624"></script>
 
-    <link href="/mermaid/mermaid.css?1726848347" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1726848347"></script>
+    <link href="/mermaid/mermaid.css?1726848624" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1726848624"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
