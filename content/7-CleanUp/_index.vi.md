@@ -45,11 +45,11 @@ Tùy thuộc vào các tài nguyên đã được triển khai, việc xóa stac
 
 ![11-cleanup](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/11-cleanup/011-11-cleanup.png?width=90pc)
 
-- **Xóa hình ảnh** trong các kho chứa (Private registry ECR)
+- **Xóa Images** trong Repositories(Private registry ECR)
 
 ![11-cleanup](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/11-cleanup/007-11-cleanup.png?width=90pc)
 
-- **Xóa các kho chứa** (Private registry ECR)
+- **Xóa Repositories** (Private registry ECR)
 
 ![11-cleanup](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/11-cleanup/006-11-cleanup.png?width=90pc)
 
@@ -69,6 +69,6 @@ Tùy thuộc vào các tài nguyên đã được triển khai, việc xóa stac
 
 ![11-cleanup](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/11-cleanup/010-11-cleanup.png?width=90pc)
 
-- Trong các phiên bản EC2, kết thúc (xóa) phiên bản.
+- Trong EC2, kết thúc (xóa) instance.
 
 ![11-cleanup](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/11-cleanup/009-11-cleanup.png?width=90pc)

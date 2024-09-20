@@ -6,7 +6,11 @@ chapter = false
 pre = "<b>4. </b>"
 +++ 
 ### Overview
-Deploy Chatbot
+This section outlines the necessary steps to deploy your Multi-Model and Multi-RAG powered chatbot on AWS using the AWS CDK. By following these instructions, you'll ensure that your chatbot is not only operational but also optimized for performance and security.
+
+The deployment process includes setting up the application infrastructure, configuring the user interface, and integrating essential services like Kendra for information retrieval. Additionally, you'll have the option to customize your deployment with a public or private domain, depending on your requirements.
+
+By the end of this section, you will have a fully deployed chatbot ready to handle user interactions effectively.
 
 ### Content
 1. [Deployment](1-Deployment)

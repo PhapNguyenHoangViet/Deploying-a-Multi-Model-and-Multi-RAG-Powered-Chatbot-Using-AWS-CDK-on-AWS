@@ -6,7 +6,7 @@ chapter = false
 pre = "<b>2. </b>"
 +++
 ### Overview
-Preparation steps
+Before deploying a Multi-Model and Multi-RAG powered chatbot using AWS CDK, it's essential to prepare your AWS environment. This preparation ensures that all necessary resources are correctly configured and that your deployment will run smoothly. The following steps will guide you through setting up IAM users, VPCs, security groups, and EC2 instances, which are crucial for the secure and efficient operation of your chatbot.
 
 ### Content
 1. [Creating IAM User](1-CreatingIAMUser)

@@ -19,4 +19,6 @@ The homepage of an AWS GenAI Chatbot application.
 
 ![10-testresult](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/10-testresult/003-10-testresult.png?width=90pc)
 
+- Detailed views of how users will engage with the chatbot.
+
 ![10-testresult](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/10-testresult/004-10-testresult.png?width=90pc)
