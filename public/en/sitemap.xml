@@ -2,6 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>//localhost:1313/6-testresult/1-chatbot/</loc>
+    <lastmod>1970-01-01T07:33:44+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/6-testresult/1-chatbot/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/6-testresult/1-chatbot/"
+                />
+  </url><url>
     <loc>//localhost:1313/</loc>
     <lastmod>1970-01-01T07:33:44+07:00</lastmod>
     <xhtml:link
@@ -13,6 +26,19 @@
                 rel="alternate"
                 hreflang="en"
                 href="//localhost:1313/"
+                />
+  </url><url>
+    <loc>//localhost:1313/4-deploy/1-deployment/</loc>
+    <lastmod>1970-01-01T07:33:44+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/4-deploy/1-deployment/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/4-deploy/1-deployment/"
                 />
   </url><url>
     <loc>//localhost:1313/1-introduction/</loc>
@@ -29,51 +55,314 @@
                 />
   </url><url>
     <loc>//localhost:1313/1-introduction/1-awsgenaillmchatbot/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/1-introduction/1-awsgenaillmchatbot/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/1-introduction/1-awsgenaillmchatbot/"
+                />
   </url><url>
     <loc>//localhost:1313/2-preparation-steps/1-creatingiamuser/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-preparation-steps/1-creatingiamuser/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-preparation-steps/1-creatingiamuser/"
+                />
   </url><url>
     <loc>//localhost:1313/3-setupproject/1-folkrepository/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-setupproject/1-folkrepository/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-setupproject/1-folkrepository/"
+                />
   </url><url>
     <loc>//localhost:1313/1-introduction/2-awsresourcesdeployed/</loc>
     <lastmod>1970-01-01T07:33:44+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/1-introduction/2-awsresourcesdeployed/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/1-introduction/2-awsresourcesdeployed/"
+                />
+  </url><url>
+    <loc>//localhost:1313/6-testresult/2-multichatsample/</loc>
+    <lastmod>1970-01-01T07:33:44+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/6-testresult/2-multichatsample/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/6-testresult/2-multichatsample/"
+                />
   </url><url>
     <loc>//localhost:1313/2-preparation-steps/</loc>
     <lastmod>1970-01-01T07:33:44+07:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/2-preparation-steps/2-creatingvpc/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-preparation-steps/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-preparation-steps/"
+                />
   </url><url>
     <loc>//localhost:1313/3-setupproject/2-installnotejs/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-setupproject/2-installnotejs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-setupproject/2-installnotejs/"
+                />
+  </url><url>
+    <loc>//localhost:1313/2-preparation-steps/2-creatingvpc/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-preparation-steps/2-creatingvpc/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-preparation-steps/2-creatingvpc/"
+                />
+  </url><url>
+    <loc>//localhost:1313/4-deploy/2-runuserinterfacelocally/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/4-deploy/2-runuserinterfacelocally/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/4-deploy/2-runuserinterfacelocally/"
+                />
   </url><url>
     <loc>//localhost:1313/1-introduction/3-modelrequirements/</loc>
     <lastmod>1970-01-01T07:33:44+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/1-introduction/3-modelrequirements/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/1-introduction/3-modelrequirements/"
+                />
+  </url><url>
+    <loc>//localhost:1313/6-testresult/3-multimodalsample/</loc>
+    <lastmod>1970-01-01T07:33:44+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/6-testresult/3-multimodalsample/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/6-testresult/3-multimodalsample/"
+                />
   </url><url>
     <loc>//localhost:1313/3-setupproject/</loc>
     <lastmod>1970-01-01T07:33:44+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-setupproject/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-setupproject/"
+                />
   </url><url>
     <loc>//localhost:1313/3-setupproject/3-installdocker/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-setupproject/3-installdocker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-setupproject/3-installdocker/"
+                />
   </url><url>
     <loc>//localhost:1313/2-preparation-steps/3-setupsecuritygroups/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-preparation-steps/3-setupsecuritygroups/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-preparation-steps/3-setupsecuritygroups/"
+                />
+  </url><url>
+    <loc>//localhost:1313/4-deploy/3-usingkendra/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/4-deploy/3-usingkendra/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/4-deploy/3-usingkendra/"
+                />
+  </url><url>
+    <loc>//localhost:1313/6-testresult/4-createworkspacesample/</loc>
+    <lastmod>1970-01-01T07:33:44+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/6-testresult/4-createworkspacesample/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/6-testresult/4-createworkspacesample/"
+                />
   </url><url>
     <loc>//localhost:1313/4-deploy/</loc>
     <lastmod>1970-01-01T07:33:44+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/4-deploy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/4-deploy/"
+                />
+  </url><url>
+    <loc>//localhost:1313/4-deploy/4-custompublicdomain/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/4-deploy/4-custompublicdomain/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/4-deploy/4-custompublicdomain/"
+                />
   </url><url>
     <loc>//localhost:1313/2-preparation-steps/4-launchec2instance/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-preparation-steps/4-launchec2instance/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-preparation-steps/4-launchec2instance/"
+                />
+  </url><url>
+    <loc>//localhost:1313/6-testresult/5-workspacedebugsample/</loc>
+    <lastmod>1970-01-01T07:33:44+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/6-testresult/5-workspacedebugsample/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/6-testresult/5-workspacedebugsample/"
+                />
   </url><url>
     <loc>//localhost:1313/2-preparation-steps/5-connecttoec2fromvscode/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-preparation-steps/5-connecttoec2fromvscode/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-preparation-steps/5-connecttoec2fromvscode/"
+                />
   </url><url>
-    <loc>//localhost:1313/5-usingkendra/</loc>
+    <loc>//localhost:1313/5-monitoring/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/5-monitoring/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/5-monitoring/"
+                />
   </url><url>
-    <loc>//localhost:1313/6-custompublicdomain/</loc>
+    <loc>//localhost:1313/4-deploy/5-privatechatbot/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/4-deploy/5-privatechatbot/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/4-deploy/5-privatechatbot/"
+                />
   </url><url>
-    <loc>//localhost:1313/7-privatechatbot/</loc>
+    <loc>//localhost:1313/6-testresult/</loc>
+    <lastmod>1970-01-01T07:33:44+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/6-testresult/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/6-testresult/"
+                />
   </url><url>
-    <loc>//localhost:1313/8-cognitofederation/</loc>
-  </url><url>
-    <loc>//localhost:1313/9-monitoring/</loc>
-  </url><url>
-    <loc>//localhost:1313/10-testresult/</loc>
-  </url><url>
-    <loc>//localhost:1313/11-cleanup/</loc>
+    <loc>//localhost:1313/7-cleanup/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/7-cleanup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/7-cleanup/"
+                />
   </url><url>
     <loc>//localhost:1313/categories/</loc>
     <xhtml:link

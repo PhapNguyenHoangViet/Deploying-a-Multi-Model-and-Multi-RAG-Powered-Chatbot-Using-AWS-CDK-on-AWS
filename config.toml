@@ -4,7 +4,6 @@ theme = "hugo-theme-learn"
 # For search functionality
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
-
 baseURL = "https://PhapNguyenHoangViet.github.io/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/"
 [params]
   # Change default color scheme with a variant one. Can be "red", "blue", "green".

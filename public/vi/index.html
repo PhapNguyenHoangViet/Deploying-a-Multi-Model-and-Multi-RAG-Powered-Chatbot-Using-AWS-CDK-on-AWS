@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS :: Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS</title>
+    <title>Triển khai Multi-Model and Multi-RAG Powered Chatbot sử dụng AWS CDK trên AWS :: Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS</title>
 
     
-    <link href="/css/nucleus.css?1725608740" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725608740" rel="stylesheet">
-    <link href="/css/hybrid.css?1725608740" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725608740" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725608740" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725608740" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725608740" rel="stylesheet">
-    <link href="/css/theme.css?1725608740" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725608740" rel="stylesheet">
+    <link href="/css/nucleus.css?1726844225" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1726844225" rel="stylesheet">
+    <link href="/css/hybrid.css?1726844225" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1726844225" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1726844225" rel="stylesheet">
+    <link href="/css/auto-complete.css?1726844225" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1726844225" rel="stylesheet">
+    <link href="/css/theme.css?1726844225" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1726844225" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725608740" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1726844225" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725608740"></script>
+    <script src="/js/jquery-3.3.1.min.js?1726844225"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725608740"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725608740"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1726844225"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1726844225"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725608740"></script>
+<script type="text/javascript" src="/js/search.js?1726844225"></script>
 
     
   </div>
@@ -82,13 +82,817 @@
  
   
     
-    <li data-nav-id="/vi/1-introduction/" title="Giới thiệu" class="dd-item 
+    <li data-nav-id="/vi/1-introduction/" title="Giới thiệu" class="dd-item 
         
         
         
         ">
       <a href="/vi/1-introduction/">
-          <b>1. </b>Giới thiệu
+          <b>1. </b>Giới thiệu
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-introduction/1-awsgenaillmchatbot/" title="AWS GenAI LLM Chatbot" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-introduction/1-awsgenaillmchatbot/">
+          <b>1.1. </b>AWS GenAI LLM Chatbot
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-introduction/2-awsresourcesdeployed/" title="Tổng quan Tài nguyên AWS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-introduction/2-awsresourcesdeployed/">
+          <b>1.2. </b>Tổng quan Tài nguyên AWS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-introduction/3-modelrequirements/" title="Yêu cầu về Mô hình" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-introduction/3-modelrequirements/">
+          <b>1.3. </b>Yêu cầu về Mô hình
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-preparation-steps/" title="Các bước chuẩn bị" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-preparation-steps/">
+          <b>2. </b>Các bước chuẩn bị
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-preparation-steps/1-creatingiamuser/" title="Tạo Tạo IAM User" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-preparation-steps/1-creatingiamuser/">
+          <b>2.1. </b>Tạo Tạo IAM User
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-preparation-steps/2-creatingvpc/" title="Tạo VPC" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-preparation-steps/2-creatingvpc/">
+          <b>2.2. </b>Tạo VPC
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-preparation-steps/3-setupsecuritygroups/" title="Thiết lập Security Groups" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-preparation-steps/3-setupsecuritygroups/">
+          <b>2.3. </b>Thiết lập Security Groups
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-preparation-steps/4-launchec2instance/" title="Khởi tạo EC2 Instance" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-preparation-steps/4-launchec2instance/">
+          <b>2.4. </b>Khởi tạo EC2 Instance
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-preparation-steps/5-connecttoec2fromvscode/" title="Kết nối với EC2 Instance từ VSCode" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-preparation-steps/5-connecttoec2fromvscode/">
+          <b>2.5. </b>Kết nối với EC2 Instance từ VSCode
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-setupproject/" title="Thiết lập dự án" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-setupproject/">
+          <b>3. </b>Thiết lập dự án
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-setupproject/1-folkrepository/" title="Folk repository" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-setupproject/1-folkrepository/">
+          <b>3.1. </b>Folk repository
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-setupproject/2-installnotejs/" title="Folk repository" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-setupproject/2-installnotejs/">
+          <b>3.1. </b>Folk repository
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-setupproject/3-installdocker/" title="Folk repository" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-setupproject/3-installdocker/">
+          <b>3.1. </b>Folk repository
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-deploy/" title="Triển Khai Chatbot" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-deploy/">
+          <b>4. </b>Triển Khai Chatbot
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-deploy/1-deployment/" title="Triển khai" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-deploy/1-deployment/">
+          <b>4.1. </b>Triển khai
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-deploy/2-runuserinterfacelocally/" title="Chạy giao diện người dùng cục bộ" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-deploy/2-runuserinterfacelocally/">
+          <b>4.2. </b>Chạy giao diện người dùng cục bộ
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-deploy/3-usingkendra/" title="Sử dụng Kendra với chỉ mục không phải tiếng Anh" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-deploy/3-usingkendra/">
+          <b>4.3. </b>Sử dụng Kendra với chỉ mục không phải tiếng Anh
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-deploy/4-custompublicdomain/" title="Tên miền công khai tùy chỉnh" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-deploy/4-custompublicdomain/">
+          <b>4.4. </b>Tên miền công khai tùy chỉnh
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-deploy/5-privatechatbot/" title="Chatbot riêng tư" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-deploy/5-privatechatbot/">
+          <b>4.5. </b>Chatbot riêng tư
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-monitoring/" title="Giám sát" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-monitoring/">
+          <b>5. </b>Giám sát
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-testresult/" title="Kết quả" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-testresult/">
+          <b>6. </b>Kết quả
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-testresult/1-chatbot/" title="Chatbot" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-testresult/1-chatbot/">
+          <b>6.1. </b>Chatbot
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-testresult/2-multichatsample/" title="Multichat" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-testresult/2-multichatsample/">
+          <b>6.2. </b>Multichat
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-testresult/3-multimodalsample/" title="Multimodal" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-testresult/3-multimodalsample/">
+          <b>6.3. </b>Multimodal
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-testresult/4-createworkspacesample/" title="Create workspace" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-testresult/4-createworkspacesample/">
+          <b>6.4. </b>Create workspace
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-testresult/5-workspacedebugsample/" title="Workspace debug" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-testresult/5-workspacedebugsample/">
+          <b>6.5. </b>Workspace debug
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/7-cleanup/" title="Dọn dẹp" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/7-cleanup/">
+          <b>7. </b>Dọn dẹp
           
             <i class="fas fa-check read-icon"></i>
           
@@ -183,7 +987,10 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>18-04-2024</font></i>
+        <i><font color=orange>20-09-2024</font></i>
+    <br>
+    <br>
+        <i><font color=orange>Việt Pháp</font></i>
     </left>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -212,17 +1019,22 @@
 <a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
 </span>
 
-           
-	
-		<h1>Customize your own home page</h1>
-		<p>
-		  The site is working. Don't forget to customize this homepage with your own. You typically have 3 choices :
-		</p>
-		<ul>
-			<li><b>1. </b> Create an _index.md document in <b>content</b> folder and fill it with Markdown content</li>
-			<li><b>2. </b> Create an <b>index.html</b> file in the <b>static</b> folder and fill the file with HTML content</li>
-		  <li><b>3. </b> Configure your server to automatically redirect home page to one your documentation page</li>
-		</ul>
+ 
+<h2 id="triển-khai-multi-model-and-multi-rag-powered-chatbot-sử-dụng-aws-cdk-trên-aws">Triển khai Multi-Model and Multi-RAG Powered Chatbot sử dụng AWS CDK trên AWS</h2>
+<h3 id="tổng-quan">Tổng quan</h3>
+<p><strong>&ldquo;Triển khai Multi-Model and Multi-RAG Powered Chatbot sử dụng AWS CDK trên AWS&rdquo;</strong> tập trung vào việc triển khai một chatbot sử dụng nhiều Mô hình Ngôn Ngữ Lớn (LLMs) và Mô hình Ngôn Ngữ Đa Phương Tiện (MLMs) trên AWS. Kho lưu trữ AWS GenAI LLM Chatbot cung cấp mã nguồn sẵn có và các cấu trúc CDK có thể tái sử dụng, cho phép bạn lựa chọn những gì cần triển khai.</p>
+<p>Dưới đây là tổng quan:
+<img alt="architecture" src="/images/architecture1.png?width=90pc"></p>
+<h3 id="nội-dung">Nội dung</h3>
+<ol>
+<li><a href="/vi/1-introduction/">Giới thiệu</a></li>
+<li><a href="/vi/2-preparation-steps/">Các bước chuẩn bị</a></li>
+<li><a href="/vi/3-setupproject/">Thiết lập Dự án</a></li>
+<li><a href="/vi/4-deploy/">Triển khai Chatbot</a></li>
+<li><a href="/vi/5-monitoring/">Giám sát</a></li>
+<li><a href="/vi/6-testresult/">Kết quả</a></li>
+<li><a href="/vi/7-cleanup/">Dọn dẹp</a></li>
+</ol>
 	
   
         
@@ -264,6 +1076,448 @@
 
                     
                     
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                     
 
                     
@@ -280,7 +1534,7 @@
 	 
 		
 		
-			<a class="nav nav-next" href="/vi/1-introduction/" title="Giới thiệu" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/1-introduction/" title="Giới thiệu" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -290,19 +1544,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725608740"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725608740"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725608740"></script>
-    <script src="/js/jquery.sticky.js?1725608740"></script>
-    <script src="/js/featherlight.min.js?1725608740"></script>
-    <script src="/js/highlight.pack.js?1725608740"></script>
+    <script src="/js/clipboard.min.js?1726844225"></script>
+    <script src="/js/perfect-scrollbar.min.js?1726844225"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1726844225"></script>
+    <script src="/js/jquery.sticky.js?1726844225"></script>
+    <script src="/js/featherlight.min.js?1726844225"></script>
+    <script src="/js/highlight.pack.js?1726844225"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725608740"></script>
-    <script src="/js/learn.js?1725608740"></script>
-    <script src="/js/hugo-learn.js?1725608740"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1726844225"></script>
+    <script src="/js/learn.js?1726844225"></script>
+    <script src="/js/hugo-learn.js?1726844225"></script>
 
-    <link href="/mermaid/mermaid.css?1725608740" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725608740"></script>
+    <link href="/mermaid/mermaid.css?1726844225" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1726844225"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

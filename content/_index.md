@@ -14,7 +14,10 @@ Here's an overview:
 ![architecture](/images/architecture1.png?width=90pc)
 
 ### Content
-1. [Create IAM User](1-Create-IAM-User)
-2. [CloudShell](2-Create-Workspace)
-3. [Install Kubernetes Tool](3-Install-Kubernetes-Tool)
-4. [Install Eksctl Tool](4-Install-eksctl)
+1. [Introduction](1-Introduction)
+2. [Preparation steps](2-Preparation-steps)
+3. [Setup Project](3-SetupProject)
+4. [Deploy Chatbot](4-Deploy)
+5. [Monitoring](5-Monitoring)
+6. [Test Result](6-TestResult)
+7. [Clean up](7-CleanUp)
