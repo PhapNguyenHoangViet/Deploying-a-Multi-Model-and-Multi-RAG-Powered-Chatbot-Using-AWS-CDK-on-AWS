@@ -65,35 +65,81 @@ Bí mật bạn tạo trong Secrets Manager sẽ là một bí mật dạng văn
 Việc xác thực này là cần thiết để đảm bảo bạn có quyền truy cập vào các mô hình yêu cầu xác thực và để bảo vệ các điều khoản sử dụng của nhà cung cấp mô hình.
 
 1. Đăng ký hoặc Đăng nhập tài khoản HuggingFace
-   - Truy cập [HuggingFace](https://huggingface.co/).
-   - Nếu bạn chưa có tài khoản, hãy Đăng ký bằng cách bấm vào nút "Sign Up". Nếu đã có tài khoản, hãy bấm vào "Login" và nhập thông tin để Đăng nhập.
+- Truy cập [HuggingFace](https://huggingface.co/).
+- Nếu bạn chưa có tài khoản, hãy Đăng ký bằng cách bấm vào nút "Sign Up". Nếu đã có tài khoản, hãy bấm vào "Login" và nhập thông tin để Đăng nhập.
 
 2. Lấy access tokens API từ HuggingFace
-   - Sau khi đăng nhập, vào Trang cá nhân bằng cách nhấp vào ảnh đại diện của bạn ở góc trên bên phải, sau đó chọn Settings (Cài đặt).
-   - Ở cột bên trái, chọn Access Tokens (Mã truy cập).
+- Sau khi đăng nhập, vào Trang cá nhân bằng cách nhấp vào ảnh đại diện của bạn ở góc trên bên phải, sau đó chọn Settings (Cài đặt).
+- Ở cột bên trái, chọn Access Tokens (Mã truy cập).
+
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/009-3-modelrequirements.png?width=90pc)
+
    Tại đây, bạn sẽ thấy một nút New Token (Tạo mã mới). Bấm vào nút này để tạo access tokens truy cập API mới.
    - Đặt tên cho access tokens của bạn và chọn quyền truy cập là Read (Chỉ đọc), sau đó bấm Generate (Tạo mã).
    - Sao chép access tokens API này, vì bạn sẽ cần sử dụng nó ở các bước tiếp theo.
 
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/010-3-modelrequirements.png?width=90pc)
+
+
 3. Chấp nhận Điều khoản sử dụng Mô hình (nếu có)
-   - Để sử dụng các mô hình bị hạn chế như mistral7B hoặc các mô hình Meta, bạn cần chấp nhận EULA của mô hình.
-   - Truy cập vào trang mô hình mà bạn muốn sử dụng (ví dụ: mistral7B).
-   - Cuộn xuống phần Model Card và nếu mô hình yêu cầu, bạn sẽ thấy một nút để chấp nhận các điều khoản và điều kiện.
-   - Bấm vào nút Accept để chấp nhận các điều khoản và cho phép access tokens của bạn truy cập vào mô hình.
+- Để sử dụng các mô hình bị hạn chế như mistral7B hoặc các mô hình Meta, bạn cần chấp nhận EULA của mô hình.
+- Truy cập vào trang mô hình mà bạn muốn sử dụng (ví dụ: mistral7B).
+- Cuộn xuống phần Model Card và nếu mô hình yêu cầu, bạn sẽ thấy một nút để chấp nhận các điều khoản và điều kiện.
+- Bấm vào nút Accept để chấp nhận các điều khoản và cho phép access tokens của bạn truy cập vào mô hình.
+
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/011-3-modelrequirements.png?width=90pc)
      
 4. Tạo Bí mật API trong AWS Secrets Manager
-   - Truy cập AWS Secrets Manager trong bảng điều khiển AWS.
-   - Nhấn Store a new secret (Lưu trữ bí mật mới).
-   - Chọn Other type of secrets (Loại bí mật khác) và nhập access tokens HF của bạn vào dưới dạng văn bản thuần (Plaintext).
-   - Đặt tên cho bí mật, ví dụ: HuggingFace-Token và lưu trữ nó.
-   - Lưu lại ARN bí mật từ Secrets Manager vì bạn sẽ sử dụng ARN này để cung cấp access tokens cho Amazon SageMaker.
+- Truy cập AWS Secrets Manager trong bảng điều khiển AWS.
+- Nhấn Store a new secret (Lưu trữ bí mật mới).
 
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/012-3-modelrequirements.png?width=90pc)
+
+- Chọn Other type of secrets (Loại bí mật khác) và nhập access tokens HF của bạn vào dưới dạng văn bản thuần (Plaintext).
+
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/013-3-modelrequirements.png?width=90pc)
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/014-3-modelrequirements.png?width=90pc)
+
+- Đặt tên cho bí mật, ví dụ: HuggingFace-Token và lưu trữ nó.
+
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/015-3-modelrequirements.png?width=90pc)
+
+- Lưu lại ARN bí mật từ Secrets Manager vì bạn sẽ sử dụng ARN này để cung cấp access tokens cho Amazon SageMaker.
+
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/016-3-modelrequirements.png?width=90pc)
 
 #### Yêu cầu cho mô hình của bên thứ ba
 
 Bạn cũng có thể tương tác với các nhà cung cấp bên ngoài thông qua API của họ, chẳng hạn như AI21 Labs, Cohere, OpenAI,...
 
 Nhà cung cấp phải được hỗ trợ trong [Model Interface](https://github.com/aws-samples/aws-genai-llm-chatbot/blob/main/lib/model-interfaces/langchain/functions/request-handler/index.py), [ xem danh sách tích hợp langchain có sẵn](https://python.langchain.com/docs/integrations/llms/) để biết danh sách toàn diện các nhà cung cấp.
+**Ví dụ:**
+
+1. OpenAI
+- Truy cập vào [trang web OpenAI](https://platform.openai.com/signup) và đăng ký tài khoản (hoặc đăng nhập nếu bạn đã có tài khoản).
+- Sau khi đăng nhập, điều hướng đến trang **API keys** trong bảng điều khiển của bạn.
+- Nhấn vào nút **Create API Key**.
+- Sao chép **API Key** mà bạn vừa tạo và lưu trữ an toàn.
+
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/017-3-modelrequirements.png?width=90pc)
+
+2. AI21 Labs
+- Truy cập vào [trang web AI21 Labs](https://studio.ai21.com/v2) và đăng ký tài khoản.
+- Đăng nhập vào tài khoản của bạn.
+- Điều hướng đến trang **API keys** trong bảng điều khiển.
+- Nhấn vào nút **Generate API Key** để tạo một khóa mới.
+- Sao chép **API Key** và lưu trữ an toàn.
+
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/018-3-modelrequirements.png?width=90pc)
+
+3. Cohere
+- Truy cập vào [trang web Cohere](https://dashboard.cohere.com/) và đăng ký tài khoản.
+- Đăng nhập vào bảng điều khiển của bạn.
+- Vào phần **API keys** trong bảng điều khiển.
+- Nhấn vào nút **Create API Key**.
+- Sao chép **API Key** và lưu trữ an toàn.
+
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/019-3-modelrequirements.png?width=90pc)
 
 Thông thường, một **API_KEY** là cần thiết để tích hợp với các mô hình bên thứ ba. Để làm điều này, [Model Interface](https://github.com/aws-samples/aws-genai-llm-chatbot/blob/main/lib/model-interfaces/langchain/index.ts)  sẽ triển khai một **Secrets** trong [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/), ban đầu với một JSON rỗng {}, nơi bạn có thể thêm các API KEY một hoặc nhiều nhà cung cấp.
 
@@ -111,6 +157,7 @@ Ví dụ, nếu bạn muốn có khả năng tương tác với AI21 Labs, OpenA
   "COHERE_API_KEY": "xxxxx"
 }
 ```
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/020-3-modelrequirements.png?width=90pc)
 
 {{% notice note %}}
 Trong trường hợp không cần khóa, giá trị bí mật phải là một JSON rỗng `{}`, KHÔNG phải là một chuỗi rỗng `''`.

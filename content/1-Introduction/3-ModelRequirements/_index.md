@@ -65,28 +65,47 @@ You can read more about setting up access tokens on the [HF website](https://hug
 The secret you would create in secrets manager would be a plain text secret containing just the HF token itself.
 
 1. Sign Up or Log In to HuggingFace
-   - Visit [HuggingFace](https://huggingface.co/).
-   - If you don’t have an account, click **Sign Up**. If you already have an account, click **Login** and enter your credentials to **Log In**.
+- Visit [HuggingFace](https://huggingface.co/).
+- If you don’t have an account, click **Sign Up**. If you already have an account, click **Login** and enter your credentials to **Log In**.
 
 2. Obtain API Access Tokens from HuggingFace
-   - After logging in, go to your **Profile** by clicking on your avatar in the top-right corner, then select **Settings**.
-   - On the left-hand menu, select **Access Tokens**.
-   - Here, you’ll see a button labeled **New Token**. Click this to create a new API access token.
+- After logging in, go to your **Profile** by clicking on your avatar in the top-right corner, then select **Settings**.
+- On the left-hand menu, select **Access Tokens**.
+- Here, you’ll see a button labeled **New Token**. Click this to create a new API access token.
+
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/009-3-modelrequirements.png?width=90pc)
+
    - Name your access token and set the access level to **Read**, then click **Generate**.
    - Copy the API access token, as you will need it in the next steps.
 
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/010-3-modelrequirements.png?width=90pc)
+
 3. Accept Model Usage Terms (if required)
-   - To access restricted models like **mistral7B** or Meta models, you need to accept the model’s **EULA**.
-   - Go to the model page you want to use (e.g., mistral7B).
-   - Scroll down to the **Model Card**, and if the model requires it, you will see a button to accept the terms and conditions.
-   - Click **Accept** to agree to the terms and allow your access token to access the model.
-     
+- To access restricted models like **mistral7B** or Meta models, you need to accept the model’s **EULA**.
+- Go to the model page you want to use (e.g., mistral7B).
+- Scroll down to the **Model Card**, and if the model requires it, you will see a button to accept the terms and conditions.
+- Click **Accept** to agree to the terms and allow your access token to access the model.
+
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/011-3-modelrequirements.png?width=90pc)
+
 4. Create an API Secret in AWS Secrets Manager
-   - Go to **AWS Secrets Manager** in the AWS Management Console.
-   - Click **Store a new secret**.
-   - Choose **Other type of secrets** and enter your HuggingFace access token as plain text (**Plaintext**).
-   - Name the secret, for example, **HuggingFace-Token**, and store it.
-   - Save the **Secret ARN** from Secrets Manager, as you will use this ARN to provide the access token to **Amazon SageMaker**.
+- Go to **AWS Secrets Manager** in the AWS Management Console.
+- Click **Store a new secret**.
+
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/012-3-modelrequirements.png?width=90pc)
+
+- Choose **Other type of secrets** and enter your HuggingFace access token.
+
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/013-3-modelrequirements.png?width=90pc)
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/014-3-modelrequirements.png?width=90pc)
+
+- Name the secret, for example, **HuggingFace-Token**, and store it.
+
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/015-3-modelrequirements.png?width=90pc)
+
+- Save the **Secret ARN** from Secrets Manager, as you will use this ARN to provide the access token to **Amazon SageMaker**.
+
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/016-3-modelrequirements.png?width=90pc)
 
 
 #### Third-party models requirements
@@ -94,6 +113,33 @@ The secret you would create in secrets manager would be a plain text secret cont
 You can also interact with external providers via their API, such as AI21 Labs, Cohere, OpenAI, etc.
 
 The provider must be supported in the [Model Interface](https://github.com/aws-samples/aws-genai-llm-chatbot/blob/main/lib/model-interfaces/langchain/functions/request-handler/index.py), [see available langchain integrations](https://python.langchain.com/docs/integrations/llms/) for a comprehensive list of providers.
+
+**Example:**
+1. OpenAI
+- Go to the [OpenAI website](https://platform.openai.com/signup) and sign up for an account (or log in if you already have one).
+- After logging in, navigate to the API keys page in your dashboard.
+- Click the Create API Key button.
+- Copy the API Key you just generated and store it securely.
+
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/017-3-modelrequirements.png?width=90pc)
+
+2. AI21 Labs
+- Go to the [AI21 Labs website](https://studio.ai21.com/v2) and sign up for an account.
+- Log in to your account.
+- Navigate to the API keys page in your dashboard.
+- Click the Generate API Key button to create a new key.
+- Copy the API Key and save it securely.
+
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/018-3-modelrequirements.png?width=90pc)
+
+3. Cohere
+- Go to the [Cohere website](https://dashboard.cohere.com/) and sign up for an account.
+- Log in to your dashboard.
+- Go to the API keys section in your dashboard.
+- Click the Create API Key button.
+- Copy the API Key and store it securely.
+
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/019-3-modelrequirements.png?width=90pc)
 
 Usually, an `API_KEY` is required to integrate with 3P models. To do so, the [Model Interface](https://github.com/aws-samples/aws-genai-llm-chatbot/blob/main/lib/model-interfaces/langchain/index.ts) deployes a Secrets in [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/), intially with an empty JSON `{}`, where you can add your API KEYS for one or more providers.
 
@@ -111,6 +157,7 @@ For example, if you wish to be able to interact with AI21 Labs., OpenAI's and Co
   "COHERE_API_KEY": "xxxxx"
 }
 ```
+![3-modelrequirements](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/020-3-modelrequirements.png?width=90pc)
 
 
 

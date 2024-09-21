@@ -12,21 +12,21 @@
     <title>Yêu cầu về Mô hình :: Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS</title>
 
     
-    <link href="/css/nucleus.css?1726859728" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1726859728" rel="stylesheet">
-    <link href="/css/hybrid.css?1726859728" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1726859728" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1726859728" rel="stylesheet">
-    <link href="/css/auto-complete.css?1726859728" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1726859728" rel="stylesheet">
-    <link href="/css/theme.css?1726859728" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1726859728" rel="stylesheet">
+    <link href="/css/nucleus.css?1726887384" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1726887384" rel="stylesheet">
+    <link href="/css/hybrid.css?1726887384" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1726887384" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1726887384" rel="stylesheet">
+    <link href="/css/auto-complete.css?1726887384" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1726887384" rel="stylesheet">
+    <link href="/css/theme.css?1726887384" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1726887384" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1726859728" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1726887384" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1726859728"></script>
+    <script src="/js/jquery-3.3.1.min.js?1726887384"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1726859728"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1726859728"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1726887384"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1726887384"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1726859728"></script>
+<script type="text/javascript" src="/js/search.js?1726887384"></script>
 
     
   </div>
@@ -1132,46 +1132,93 @@
 <p>Bí mật bạn tạo trong Secrets Manager sẽ là một bí mật dạng văn bản thuần, chỉ chứa access tokens HF.</p>
 <p>Việc xác thực này là cần thiết để đảm bảo bạn có quyền truy cập vào các mô hình yêu cầu xác thực và để bảo vệ các điều khoản sử dụng của nhà cung cấp mô hình.</p>
 <ol>
-<li>
-<p>Đăng ký hoặc Đăng nhập tài khoản HuggingFace</p>
+<li>Đăng ký hoặc Đăng nhập tài khoản HuggingFace</li>
+</ol>
 <ul>
 <li>Truy cập <a href="https://huggingface.co/">HuggingFace</a>.</li>
 <li>Nếu bạn chưa có tài khoản, hãy Đăng ký bằng cách bấm vào nút &ldquo;Sign Up&rdquo;. Nếu đã có tài khoản, hãy bấm vào &ldquo;Login&rdquo; và nhập thông tin để Đăng nhập.</li>
 </ul>
-</li>
-<li>
-<p>Lấy access tokens API từ HuggingFace</p>
+<ol start="2">
+<li>Lấy access tokens API từ HuggingFace</li>
+</ol>
 <ul>
 <li>Sau khi đăng nhập, vào Trang cá nhân bằng cách nhấp vào ảnh đại diện của bạn ở góc trên bên phải, sau đó chọn Settings (Cài đặt).</li>
-<li>Ở cột bên trái, chọn Access Tokens (Mã truy cập).
-Tại đây, bạn sẽ thấy một nút New Token (Tạo mã mới). Bấm vào nút này để tạo access tokens truy cập API mới.</li>
+<li>Ở cột bên trái, chọn Access Tokens (Mã truy cập).</li>
+</ul>
+<p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/009-3-modelrequirements.png?width=90pc"></p>
+<p>Tại đây, bạn sẽ thấy một nút New Token (Tạo mã mới). Bấm vào nút này để tạo access tokens truy cập API mới.</p>
+<ul>
 <li>Đặt tên cho access tokens của bạn và chọn quyền truy cập là Read (Chỉ đọc), sau đó bấm Generate (Tạo mã).</li>
 <li>Sao chép access tokens API này, vì bạn sẽ cần sử dụng nó ở các bước tiếp theo.</li>
 </ul>
-</li>
-<li>
-<p>Chấp nhận Điều khoản sử dụng Mô hình (nếu có)</p>
+<p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/010-3-modelrequirements.png?width=90pc"></p>
+<ol start="3">
+<li>Chấp nhận Điều khoản sử dụng Mô hình (nếu có)</li>
+</ol>
 <ul>
 <li>Để sử dụng các mô hình bị hạn chế như mistral7B hoặc các mô hình Meta, bạn cần chấp nhận EULA của mô hình.</li>
 <li>Truy cập vào trang mô hình mà bạn muốn sử dụng (ví dụ: mistral7B).</li>
 <li>Cuộn xuống phần Model Card và nếu mô hình yêu cầu, bạn sẽ thấy một nút để chấp nhận các điều khoản và điều kiện.</li>
 <li>Bấm vào nút Accept để chấp nhận các điều khoản và cho phép access tokens của bạn truy cập vào mô hình.</li>
 </ul>
-</li>
-<li>
-<p>Tạo Bí mật API trong AWS Secrets Manager</p>
+<p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/011-3-modelrequirements.png?width=90pc"></p>
+<ol start="4">
+<li>Tạo Bí mật API trong AWS Secrets Manager</li>
+</ol>
 <ul>
 <li>Truy cập AWS Secrets Manager trong bảng điều khiển AWS.</li>
 <li>Nhấn Store a new secret (Lưu trữ bí mật mới).</li>
+</ul>
+<p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/012-3-modelrequirements.png?width=90pc"></p>
+<ul>
 <li>Chọn Other type of secrets (Loại bí mật khác) và nhập access tokens HF của bạn vào dưới dạng văn bản thuần (Plaintext).</li>
+</ul>
+<p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/013-3-modelrequirements.png?width=90pc">
+<img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/014-3-modelrequirements.png?width=90pc"></p>
+<ul>
 <li>Đặt tên cho bí mật, ví dụ: HuggingFace-Token và lưu trữ nó.</li>
+</ul>
+<p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/015-3-modelrequirements.png?width=90pc"></p>
+<ul>
 <li>Lưu lại ARN bí mật từ Secrets Manager vì bạn sẽ sử dụng ARN này để cung cấp access tokens cho Amazon SageMaker.</li>
 </ul>
-</li>
-</ol>
+<p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/016-3-modelrequirements.png?width=90pc"></p>
 <h4 id="yêu-cầu-cho-mô-hình-của-bên-thứ-ba">Yêu cầu cho mô hình của bên thứ ba</h4>
 <p>Bạn cũng có thể tương tác với các nhà cung cấp bên ngoài thông qua API của họ, chẳng hạn như AI21 Labs, Cohere, OpenAI,&hellip;</p>
-<p>Nhà cung cấp phải được hỗ trợ trong <a href="https://github.com/aws-samples/aws-genai-llm-chatbot/blob/main/lib/model-interfaces/langchain/functions/request-handler/index.py">Model Interface</a>, <a href="https://python.langchain.com/docs/integrations/llms/"> xem danh sách tích hợp langchain có sẵn</a> để biết danh sách toàn diện các nhà cung cấp.</p>
+<p>Nhà cung cấp phải được hỗ trợ trong <a href="https://github.com/aws-samples/aws-genai-llm-chatbot/blob/main/lib/model-interfaces/langchain/functions/request-handler/index.py">Model Interface</a>, <a href="https://python.langchain.com/docs/integrations/llms/"> xem danh sách tích hợp langchain có sẵn</a> để biết danh sách toàn diện các nhà cung cấp.
+<strong>Ví dụ:</strong></p>
+<ol>
+<li>OpenAI</li>
+</ol>
+<ul>
+<li>Truy cập vào <a href="https://platform.openai.com/signup">trang web OpenAI</a> và đăng ký tài khoản (hoặc đăng nhập nếu bạn đã có tài khoản).</li>
+<li>Sau khi đăng nhập, điều hướng đến trang <strong>API keys</strong> trong bảng điều khiển của bạn.</li>
+<li>Nhấn vào nút <strong>Create API Key</strong>.</li>
+<li>Sao chép <strong>API Key</strong> mà bạn vừa tạo và lưu trữ an toàn.</li>
+</ul>
+<p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/017-3-modelrequirements.png?width=90pc"></p>
+<ol start="2">
+<li>AI21 Labs</li>
+</ol>
+<ul>
+<li>Truy cập vào <a href="https://studio.ai21.com/v2">trang web AI21 Labs</a> và đăng ký tài khoản.</li>
+<li>Đăng nhập vào tài khoản của bạn.</li>
+<li>Điều hướng đến trang <strong>API keys</strong> trong bảng điều khiển.</li>
+<li>Nhấn vào nút <strong>Generate API Key</strong> để tạo một khóa mới.</li>
+<li>Sao chép <strong>API Key</strong> và lưu trữ an toàn.</li>
+</ul>
+<p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/018-3-modelrequirements.png?width=90pc"></p>
+<ol start="3">
+<li>Cohere</li>
+</ol>
+<ul>
+<li>Truy cập vào <a href="https://dashboard.cohere.com/">trang web Cohere</a> và đăng ký tài khoản.</li>
+<li>Đăng nhập vào bảng điều khiển của bạn.</li>
+<li>Vào phần <strong>API keys</strong> trong bảng điều khiển.</li>
+<li>Nhấn vào nút <strong>Create API Key</strong>.</li>
+<li>Sao chép <strong>API Key</strong> và lưu trữ an toàn.</li>
+</ul>
+<p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/019-3-modelrequirements.png?width=90pc"></p>
 <p>Thông thường, một <strong>API_KEY</strong> là cần thiết để tích hợp với các mô hình bên thứ ba. Để làm điều này, <a href="https://github.com/aws-samples/aws-genai-llm-chatbot/blob/main/lib/model-interfaces/langchain/index.ts">Model Interface</a>  sẽ triển khai một <strong>Secrets</strong> trong <a href="https://aws.amazon.com/secrets-manager/">AWS Secrets Manager</a>, ban đầu với một JSON rỗng {}, nơi bạn có thể thêm các API KEY một hoặc nhiều nhà cung cấp.</p>
 <p>Các khóa này sẽ được tiêm vào runtime vào các Biến Môi trường của chức năng Lambda; chúng sẽ không hiển thị trong AWS Lambda Console.</p>
 <p>Ví dụ, nếu bạn muốn có khả năng tương tác với AI21 Labs, OpenAI và Cohere endpoints:</p>
@@ -1184,7 +1231,8 @@ Tại đây, bạn sẽ thấy một nút New Token (Tạo mã mới). Bấm và
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;OPENAI_API_KEY&#34;</span>: <span style="color:#e6db74">&#34;sk-xxxxxxxxxxxxxxx&#34;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;COHERE_API_KEY&#34;</span>: <span style="color:#e6db74">&#34;xxxxx&#34;</span>
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div>
+</span></span></code></pre></div><p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/020-3-modelrequirements.png?width=90pc"></p>
+
 <div class="notices note" ><p>Trong trường hợp không cần khóa, giá trị bí mật phải là một JSON rỗng <code>{}</code>, KHÔNG phải là một chuỗi rỗng <code>''</code>.</p>
 </div>
 
@@ -1738,19 +1786,19 @@ Tại đây, bạn sẽ thấy một nút New Token (Tạo mã mới). Bấm và
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1726859728"></script>
-    <script src="/js/perfect-scrollbar.min.js?1726859728"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1726859728"></script>
-    <script src="/js/jquery.sticky.js?1726859728"></script>
-    <script src="/js/featherlight.min.js?1726859728"></script>
-    <script src="/js/highlight.pack.js?1726859728"></script>
+    <script src="/js/clipboard.min.js?1726887384"></script>
+    <script src="/js/perfect-scrollbar.min.js?1726887384"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1726887384"></script>
+    <script src="/js/jquery.sticky.js?1726887384"></script>
+    <script src="/js/featherlight.min.js?1726887384"></script>
+    <script src="/js/highlight.pack.js?1726887384"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1726859728"></script>
-    <script src="/js/learn.js?1726859728"></script>
-    <script src="/js/hugo-learn.js?1726859728"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1726887384"></script>
+    <script src="/js/learn.js?1726887384"></script>
+    <script src="/js/hugo-learn.js?1726887384"></script>
 
-    <link href="/mermaid/mermaid.css?1726859728" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1726859728"></script>
+    <link href="/mermaid/mermaid.css?1726887384" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1726887384"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

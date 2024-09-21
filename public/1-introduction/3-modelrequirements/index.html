@@ -12,21 +12,21 @@
     <title>Model Requirements :: Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS</title>
 
     
-    <link href="/css/nucleus.css?1726859728" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1726859728" rel="stylesheet">
-    <link href="/css/hybrid.css?1726859728" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1726859728" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1726859728" rel="stylesheet">
-    <link href="/css/auto-complete.css?1726859728" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1726859728" rel="stylesheet">
-    <link href="/css/theme.css?1726859728" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1726859728" rel="stylesheet">
+    <link href="/css/nucleus.css?1726887384" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1726887384" rel="stylesheet">
+    <link href="/css/hybrid.css?1726887384" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1726887384" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1726887384" rel="stylesheet">
+    <link href="/css/auto-complete.css?1726887384" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1726887384" rel="stylesheet">
+    <link href="/css/theme.css?1726887384" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1726887384" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1726859728" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1726887384" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1726859728"></script>
+    <script src="/js/jquery-3.3.1.min.js?1726887384"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1726859728"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1726859728"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1726887384"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1726887384"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1726859728"></script>
+<script type="text/javascript" src="/js/search.js?1726887384"></script>
 
     
   </div>
@@ -1134,46 +1134,93 @@
 <p>You can read more about setting up access tokens on the <a href="https://huggingface.co/docs/hub/en/security-tokens">HF website</a> Once you&rsquo;ve got a token you may need to also navigate to a models page such as mistral7B to accept their terms before you can then use your token to access the model.</p>
 <p>The secret you would create in secrets manager would be a plain text secret containing just the HF token itself.</p>
 <ol>
-<li>
-<p>Sign Up or Log In to HuggingFace</p>
+<li>Sign Up or Log In to HuggingFace</li>
+</ol>
 <ul>
 <li>Visit <a href="https://huggingface.co/">HuggingFace</a>.</li>
 <li>If you don’t have an account, click <strong>Sign Up</strong>. If you already have an account, click <strong>Login</strong> and enter your credentials to <strong>Log In</strong>.</li>
 </ul>
-</li>
-<li>
-<p>Obtain API Access Tokens from HuggingFace</p>
+<ol start="2">
+<li>Obtain API Access Tokens from HuggingFace</li>
+</ol>
 <ul>
 <li>After logging in, go to your <strong>Profile</strong> by clicking on your avatar in the top-right corner, then select <strong>Settings</strong>.</li>
 <li>On the left-hand menu, select <strong>Access Tokens</strong>.</li>
 <li>Here, you’ll see a button labeled <strong>New Token</strong>. Click this to create a new API access token.</li>
+</ul>
+<p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/009-3-modelrequirements.png?width=90pc"></p>
+<ul>
 <li>Name your access token and set the access level to <strong>Read</strong>, then click <strong>Generate</strong>.</li>
 <li>Copy the API access token, as you will need it in the next steps.</li>
 </ul>
-</li>
-<li>
-<p>Accept Model Usage Terms (if required)</p>
+<p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/010-3-modelrequirements.png?width=90pc"></p>
+<ol start="3">
+<li>Accept Model Usage Terms (if required)</li>
+</ol>
 <ul>
 <li>To access restricted models like <strong>mistral7B</strong> or Meta models, you need to accept the model’s <strong>EULA</strong>.</li>
 <li>Go to the model page you want to use (e.g., mistral7B).</li>
 <li>Scroll down to the <strong>Model Card</strong>, and if the model requires it, you will see a button to accept the terms and conditions.</li>
 <li>Click <strong>Accept</strong> to agree to the terms and allow your access token to access the model.</li>
 </ul>
-</li>
-<li>
-<p>Create an API Secret in AWS Secrets Manager</p>
+<p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/011-3-modelrequirements.png?width=90pc"></p>
+<ol start="4">
+<li>Create an API Secret in AWS Secrets Manager</li>
+</ol>
 <ul>
 <li>Go to <strong>AWS Secrets Manager</strong> in the AWS Management Console.</li>
 <li>Click <strong>Store a new secret</strong>.</li>
-<li>Choose <strong>Other type of secrets</strong> and enter your HuggingFace access token as plain text (<strong>Plaintext</strong>).</li>
+</ul>
+<p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/012-3-modelrequirements.png?width=90pc"></p>
+<ul>
+<li>Choose <strong>Other type of secrets</strong> and enter your HuggingFace access token.</li>
+</ul>
+<p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/013-3-modelrequirements.png?width=90pc">
+<img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/014-3-modelrequirements.png?width=90pc"></p>
+<ul>
 <li>Name the secret, for example, <strong>HuggingFace-Token</strong>, and store it.</li>
+</ul>
+<p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/015-3-modelrequirements.png?width=90pc"></p>
+<ul>
 <li>Save the <strong>Secret ARN</strong> from Secrets Manager, as you will use this ARN to provide the access token to <strong>Amazon SageMaker</strong>.</li>
 </ul>
-</li>
-</ol>
+<p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/016-3-modelrequirements.png?width=90pc"></p>
 <h4 id="third-party-models-requirements">Third-party models requirements</h4>
 <p>You can also interact with external providers via their API, such as AI21 Labs, Cohere, OpenAI, etc.</p>
 <p>The provider must be supported in the <a href="https://github.com/aws-samples/aws-genai-llm-chatbot/blob/main/lib/model-interfaces/langchain/functions/request-handler/index.py">Model Interface</a>, <a href="https://python.langchain.com/docs/integrations/llms/">see available langchain integrations</a> for a comprehensive list of providers.</p>
+<p><strong>Example:</strong></p>
+<ol>
+<li>OpenAI</li>
+</ol>
+<ul>
+<li>Go to the <a href="https://platform.openai.com/signup">OpenAI website</a> and sign up for an account (or log in if you already have one).</li>
+<li>After logging in, navigate to the API keys page in your dashboard.</li>
+<li>Click the Create API Key button.</li>
+<li>Copy the API Key you just generated and store it securely.</li>
+</ul>
+<p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/017-3-modelrequirements.png?width=90pc"></p>
+<ol start="2">
+<li>AI21 Labs</li>
+</ol>
+<ul>
+<li>Go to the <a href="https://studio.ai21.com/v2">AI21 Labs website</a> and sign up for an account.</li>
+<li>Log in to your account.</li>
+<li>Navigate to the API keys page in your dashboard.</li>
+<li>Click the Generate API Key button to create a new key.</li>
+<li>Copy the API Key and save it securely.</li>
+</ul>
+<p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/018-3-modelrequirements.png?width=90pc"></p>
+<ol start="3">
+<li>Cohere</li>
+</ol>
+<ul>
+<li>Go to the <a href="https://dashboard.cohere.com/">Cohere website</a> and sign up for an account.</li>
+<li>Log in to your dashboard.</li>
+<li>Go to the API keys section in your dashboard.</li>
+<li>Click the Create API Key button.</li>
+<li>Copy the API Key and store it securely.</li>
+</ul>
+<p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/019-3-modelrequirements.png?width=90pc"></p>
 <p>Usually, an <code>API_KEY</code> is required to integrate with 3P models. To do so, the <a href="https://github.com/aws-samples/aws-genai-llm-chatbot/blob/main/lib/model-interfaces/langchain/index.ts">Model Interface</a> deployes a Secrets in <a href="https://aws.amazon.com/secrets-manager/">AWS Secrets Manager</a>, intially with an empty JSON <code>{}</code>, where you can add your API KEYS for one or more providers.</p>
 <p>These keys will be injected at runtime into the Lambda function Environment Variables; they won&rsquo;t be visible in the AWS Lambda Console.</p>
 <p>For example, if you wish to be able to interact with AI21 Labs., OpenAI&rsquo;s and Cohere endpoints:</p>
@@ -1186,7 +1233,8 @@
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;OPENAI_API_KEY&#34;</span>: <span style="color:#e6db74">&#34;sk-xxxxxxxxxxxxxxx&#34;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;COHERE_API_KEY&#34;</span>: <span style="color:#e6db74">&#34;xxxxx&#34;</span>
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div>
+</span></span></code></pre></div><p><img alt="3-modelrequirements" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/1-introduction/3-modelrequirements/020-3-modelrequirements.png?width=90pc"></p>
+
 <div class="notices note" ><p>In case of no keys needs, the secret value must be an empty JSON <code>{}</code>, NOT an empty string <code>''</code>.</p>
 </div>
 
@@ -1741,19 +1789,19 @@ For each one, we need to define following infos you will retrieve from your Azur
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1726859728"></script>
-    <script src="/js/perfect-scrollbar.min.js?1726859728"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1726859728"></script>
-    <script src="/js/jquery.sticky.js?1726859728"></script>
-    <script src="/js/featherlight.min.js?1726859728"></script>
-    <script src="/js/highlight.pack.js?1726859728"></script>
+    <script src="/js/clipboard.min.js?1726887384"></script>
+    <script src="/js/perfect-scrollbar.min.js?1726887384"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1726887384"></script>
+    <script src="/js/jquery.sticky.js?1726887384"></script>
+    <script src="/js/featherlight.min.js?1726887384"></script>
+    <script src="/js/highlight.pack.js?1726887384"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1726859728"></script>
-    <script src="/js/learn.js?1726859728"></script>
-    <script src="/js/hugo-learn.js?1726859728"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1726887384"></script>
+    <script src="/js/learn.js?1726887384"></script>
+    <script src="/js/hugo-learn.js?1726887384"></script>
 
-    <link href="/mermaid/mermaid.css?1726859728" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1726859728"></script>
+    <link href="/mermaid/mermaid.css?1726887384" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1726887384"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
