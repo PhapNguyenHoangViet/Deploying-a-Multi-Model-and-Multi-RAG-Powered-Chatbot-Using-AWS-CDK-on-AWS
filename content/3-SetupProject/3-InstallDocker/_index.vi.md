@@ -55,6 +55,7 @@ ls -l /var/run/docker.sock
 7. Thiết lập quyền trên tệp socket Docker.
 ```
 sudo chmod 660 /var/run/docker.sock
+sudo chown root:docker /var/run/docker.sock
 ```
 
 ![installdocker](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/007-3-installdocker.png?width=90pc)
