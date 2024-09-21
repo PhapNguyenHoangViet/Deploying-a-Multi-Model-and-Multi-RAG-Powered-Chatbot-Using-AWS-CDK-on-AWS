@@ -22,6 +22,8 @@ curl -O https://dxxxxxxxxxxxx.cloudfront.net/aws-exports.json
 cd ..
 npm run dev
 ```
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/018-1-deployment.png?width=90pc)
+
 
 #### Option 2: Set configuration as env variable
 
@@ -37,3 +39,11 @@ export DEFAULT_CROSS_ENCODER_MODEL="..."
 npm run build:dev
 npm run dev
 ```
+
+**Login with the user created**
+
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/019-1-deployment.png?width=90pc)
+
+- AWS GenAI Chatbot
+
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/020-1-deployment.png?width=90pc)
