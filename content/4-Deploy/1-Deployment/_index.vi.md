@@ -33,11 +33,20 @@ npm ci && npm run build
 ![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/003-1-deployment.png?width=90pc)
 
 4. (Tùy chọn) Chạy unit tests
+- Cài đặt python3
 ```
-npm run test && pip install -r pytest_requirements.txt && pytest tests
+sudo apt install python3-pip
+```
+- Chạy unit tests
+```
+npm run test && pip install -r pytest_requirements.txt && python3 -m pytest tests
 ```
 
 ![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/004-1-deployment.png?width=90pc)
+
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/011-1-deployment.png?width=90pc)
+
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/012-1-deployment.png?width=90pc)
 
 
 5. Khi hoàn tất, chạy lệnh cấu hình để giúp bạn thiết lập giải pháp với các tính năng bạn cần:

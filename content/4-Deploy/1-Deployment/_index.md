@@ -33,11 +33,20 @@ npm ci && npm run build
 ![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/003-1-deployment.png?width=90pc)
 
 4. (Optional) Run the unit tests
+- Install python3
 ```
-npm run test && pip install -r pytest_requirements.txt && pytest tests
+sudo apt install python3-pip
+```
+- Run the unit tests
+```
+npm run test && pip install -r pytest_requirements.txt && python3 -m pytest tests
 ```
 
 ![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/004-1-deployment.png?width=90pc)
+
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/011-1-deployment.png?width=90pc)
+
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/012-1-deployment.png?width=90pc)
 
 
 5. Once done, run the configuration command to help you set up the solution with the features you need:
