@@ -64,7 +64,7 @@ You'll be prompted to configure the different aspects of the solution, such as:
 - Add existing Amazon Kendra indices as RAG sources
 When done, answer Y to create or update your configuration.
 
-![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/005-1-deployment.png?width=90pc)
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/013-1-deployment.png?width=90pc)
 
 Your configuration is now stored under `bin/config.json`. You can re-run the `npm run config` command as needed to update your `config.json`
 

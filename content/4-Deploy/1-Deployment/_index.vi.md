@@ -65,7 +65,7 @@ Bạn sẽ được nhắc cấu hình các khía cạnh khác nhau của giải
 
 Khi hoàn tất, hãy trả lời Y để tạo hoặc cập nhật cấu hình của bạn.
 
-![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/005-1-deployment.png?width=90pc)
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/013-1-deployment.png?width=90pc)
 
 Cấu hình của bạn hiện được lưu trữ trong `bin/config.json`. Bạn có thể chạy lại lệnh `npm run config` khi cần để cập nhật `config.json`.
 
