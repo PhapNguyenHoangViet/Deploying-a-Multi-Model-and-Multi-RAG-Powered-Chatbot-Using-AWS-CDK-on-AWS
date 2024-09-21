@@ -12,21 +12,21 @@
     <title>Install NodeJs :: Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS</title>
 
     
-    <link href="/css/nucleus.css?1726888094" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1726888094" rel="stylesheet">
-    <link href="/css/hybrid.css?1726888094" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1726888094" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1726888094" rel="stylesheet">
-    <link href="/css/auto-complete.css?1726888094" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1726888094" rel="stylesheet">
-    <link href="/css/theme.css?1726888094" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1726888094" rel="stylesheet">
+    <link href="/css/nucleus.css?1726889159" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1726889159" rel="stylesheet">
+    <link href="/css/hybrid.css?1726889159" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1726889159" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1726889159" rel="stylesheet">
+    <link href="/css/auto-complete.css?1726889159" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1726889159" rel="stylesheet">
+    <link href="/css/theme.css?1726889159" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1726889159" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1726888094" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1726889159" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1726888094"></script>
+    <script src="/js/jquery-3.3.1.min.js?1726889159"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1726888094"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1726888094"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1726889159"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1726889159"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1726888094"></script>
+<script type="text/javascript" src="/js/search.js?1726889159"></script>
 
     
   </div>
@@ -1084,36 +1084,36 @@
 	<ol>
 <li><strong>Updates</strong> the package list on your system.</li>
 </ol>
-<p>sudo apt update</p>
-<ul>
+<pre tabindex="0"><code>sudo apt update
+</code></pre><ul>
 <li>This command updates the list of available packages and their versions on your system. It doesn’t install or upgrade any packages; it just refreshes the package index.</li>
 </ul>
-<p><img alt="installnodejs" src="/images/3-setupproject/2-installnodejs/001-2-installnodejs.png?width=90pc"></p>
+<p><img alt="installnodejs" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/2-installnodejs/001-2-installnodejs.png?width=90pc"></p>
 <ol start="2">
-<li>Downloads and installs <strong>NVM</strong> <strong>(Node Version Manager)</strong>.
-curl -o- <a href="https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh">https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh</a> | bash</li>
+<li>Downloads and installs <strong>NVM</strong> <strong>(Node Version Manager)</strong>.</li>
 </ol>
-<ul>
+<pre tabindex="0"><code>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
+</code></pre><ul>
 <li>This command downloads and runs the NVM (Node Version Manager) installation script from GitHub. curl fetches the script, and the | bash part pipes it to the bash shell for execution. NVM allows you to manage multiple versions of Node.js on your system.</li>
 </ul>
-<p><img alt="installnodejs" src="/images/3-setupproject/2-installnodejs/002-2-installnodejs.png?width=90pc"></p>
+<p><img alt="installnodejs" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/2-installnodejs/002-2-installnodejs.png?width=90pc"></p>
 <ol start="3">
-<li>Applies the changes made by <strong>NVM</strong> to your current shell session.
-source ~/bashrc</li>
+<li>Applies the changes made by <strong>NVM</strong> to your current shell session.</li>
 </ol>
-<ul>
+<pre tabindex="0"><code>source ~/bashrc
+</code></pre><ul>
 <li>
 <p>This command reloads the .bashrc file in your home directory to apply the changes made by the NVM installation script. It ensures that NVM commands are available in your current shell session.</p>
 </li>
 <li>
-<p>Checks the installed version of <strong>NVM</strong>.
-nvm &ndash;version</p>
-<ul>
-<li>This command checks and displays the installed version of NVM to verify that it has been installed correctly.</li>
-</ul>
+<p>Checks the installed version of <strong>NVM</strong>.</p>
 </li>
 </ul>
-<p><img alt="installnodejs" src="/images/3-setupproject/2-installnodejs/003-2-installnodejs.png?width=90pc"></p>
+<pre tabindex="0"><code>nvm --version
+</code></pre><ul>
+<li>This command checks and displays the installed version of NVM to verify that it has been installed correctly.</li>
+</ul>
+<p><img alt="installnodejs" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/2-installnodejs/003-2-installnodejs.png?width=90pc"></p>
 <ol start="4">
 <li>Installs <strong>Node.js</strong> version 18 using NVM.
 nvm install 18</li>
@@ -1121,18 +1121,18 @@ nvm install 18</li>
 <ul>
 <li>Installs Node.js version 18 using NVM. You can install and manage different versions of Node.js with NVM.</li>
 </ul>
-<p><img alt="installnodejs" src="/images/3-setupproject/2-installnodejs/004-2-installnodejs.png?width=90pc"></p>
+<p><img alt="installnodejs" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/2-installnodejs/004-2-installnodejs.png?width=90pc"></p>
 <ol start="5">
-<li>Displays <strong>the version of NodeJs and the version of npm</strong>.
-node -v
-npm -v</li>
+<li>Displays <strong>the version of NodeJs and the version of npm</strong>.</li>
 </ol>
-<p><img alt="installnodejs" src="/images/3-setupproject/2-installnodejs/005-2-installnodejs.png?width=90pc"></p>
+<pre tabindex="0"><code>node -v
+npm -v
+</code></pre><p><img alt="installnodejs" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/2-installnodejs/005-2-installnodejs.png?width=90pc"></p>
 <ol start="6">
-<li><strong>Updates</strong> the package list again.
-sudo apt update</li>
+<li><strong>Updates</strong> the package list again.</li>
 </ol>
-<p><img alt="installnodejs" src="/images/3-setupproject/2-installnodejs/006-2-installnodejs.png?width=90pc"></p>
+<pre tabindex="0"><code>sudo apt update
+</code></pre><p><img alt="installnodejs" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/2-installnodejs/006-2-installnodejs.png?width=90pc"></p>
 
 
 
@@ -1659,19 +1659,19 @@ sudo apt update</li>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1726888094"></script>
-    <script src="/js/perfect-scrollbar.min.js?1726888094"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1726888094"></script>
-    <script src="/js/jquery.sticky.js?1726888094"></script>
-    <script src="/js/featherlight.min.js?1726888094"></script>
-    <script src="/js/highlight.pack.js?1726888094"></script>
+    <script src="/js/clipboard.min.js?1726889159"></script>
+    <script src="/js/perfect-scrollbar.min.js?1726889159"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1726889159"></script>
+    <script src="/js/jquery.sticky.js?1726889159"></script>
+    <script src="/js/featherlight.min.js?1726889159"></script>
+    <script src="/js/highlight.pack.js?1726889159"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1726888094"></script>
-    <script src="/js/learn.js?1726888094"></script>
-    <script src="/js/hugo-learn.js?1726888094"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1726889159"></script>
+    <script src="/js/learn.js?1726889159"></script>
+    <script src="/js/hugo-learn.js?1726889159"></script>
 
-    <link href="/mermaid/mermaid.css?1726888094" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1726888094"></script>
+    <link href="/mermaid/mermaid.css?1726889159" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1726889159"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
