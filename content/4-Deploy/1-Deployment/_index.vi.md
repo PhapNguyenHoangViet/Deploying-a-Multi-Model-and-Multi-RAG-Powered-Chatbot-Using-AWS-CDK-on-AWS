@@ -141,7 +141,19 @@ GenAIChatBotStack.ApiKeysSecretNameXXXX = ApiKeysSecretName-xxxxxx
 
 10. Thêm một người dùng sẽ được sử dụng để đăng nhập vào giao diện web.
 
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/009-1-deployment.png?width=90pc)
+
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/009-1-deployment.png?width=90pc)
+
 11. Mở **URL Giao diện** từ các đầu ra ở trên, ví dụ: dxxxxxxxxxxxxx.cloudfront.net.
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/014-1-deployment.png?width=90pc)
 
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/015-1-deployment.png?width=90pc)
 
-12. Đăng nhập bằng người dùng đã tạo ở Bước 8 và làm theo hướng dẫn.
+12. Đăng nhập bằng người dùng đã tạo ở Bước 9 và làm theo hướng dẫn.
+
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/009-1-deployment.png?width=90pc)
+
+- Giao diện AWS GenAI Chatbot
+
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/009-1-deployment.png?width=90pc)

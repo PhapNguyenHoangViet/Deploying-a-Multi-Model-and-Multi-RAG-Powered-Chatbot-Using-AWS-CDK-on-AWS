@@ -130,11 +130,24 @@ GenAIChatBotStack.ApiKeysSecretNameXXXX = ApiKeysSecretName-xxxxxx
 
 9. Open the generated **Cognito User Pool** Link from outputs above.
 
-
 ![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/009-1-deployment.png?width=90pc)
 
 10. Add a user that will be used to log into the web interface.
 
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/009-1-deployment.png?width=90pc)
+
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/009-1-deployment.png?width=90pc)
+
 11. Open the User **Interface Url** for the outputs above, i.e. dxxxxxxxxxxxxx.cloudfront.net.
 
-12. Login with the user created in Step 8 and follow the instructions.
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/014-1-deployment.png?width=90pc)
+
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/015-1-deployment.png?width=90pc)
+
+12. Login with the user created in Step 9 and follow the instructions.
+
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/009-1-deployment.png?width=90pc)
+
+- Giao diện AWS GenAI Chatbot
+
+![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/009-1-deployment.png?width=90pc)
