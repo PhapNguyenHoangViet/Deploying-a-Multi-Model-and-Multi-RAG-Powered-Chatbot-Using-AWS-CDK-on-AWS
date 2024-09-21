@@ -69,12 +69,27 @@ Khi hoàn tất, hãy trả lời Y để tạo hoặc cập nhật cấu hình 
 
 Cấu hình của bạn hiện được lưu trữ trong `bin/config.json`. Bạn có thể chạy lại lệnh `npm run config` khi cần để cập nhật `config.json`.
 
+
+6. Cài đặt **AWS CDK CLI**
+Sử dụng **Node Package Manager (npm)** để cài đặt CDK CLI. Chúng tôi khuyến nghị bạn cài đặt nó một cách toàn cầu bằng lệnh sau:
+```
+npm install -g aws-cdk
+```
+- **Đặt thông tin xác thực AWS dưới dạng biến môi trường:**
+
+Thay thế your_aws_access_key_id và your_aws_secret_access_key bằng thông tin xác thực AWS thực tế của bạn:
 ```
 export AWS_ACCESS_KEY_ID=your_aws_access_key_id
 export AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
 ```
 
 ![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/006-1-deployment.png?width=90pc)
+
+Các lệnh này sẽ tạm thời đặt thông tin xác thực AWS của bạn trong phiên terminal hiện tại. Chúng cần thiết để xác thực các cuộc gọi từ AWS CLI hoặc SDK trong phiên làm việc.
+
+- **Kiểm tra các biến môi trường:**
+
+Bạn có thể kiểm tra xem các biến đã được đặt đúng hay chưa bằng các lệnh sau:
 
 ```
 echo $AWS_ACCESS_KEY_ID
@@ -83,8 +98,12 @@ echo $AWS_SECRET_ACCESS_KEY
 
 ![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/007-1-deployment.png?width=90pc)
 
+Điều này sẽ in ra các giá trị của **AWS_ACCESS_KEY_ID** và **AWS_SECRET_ACCESS_KEY** trong terminal để xác nhận rằng chúng đã được đặt thành công.
 
-6. Bây giờ bạn có thể triển khai bằng cách chạy:
+
+
+
+7. Bây giờ bạn có thể triển khai bằng cách chạy:
 
 ```
 npm run cdk deploy
@@ -104,7 +123,7 @@ Bạn có thể xem tiến trình triển khai CDK của mình trong [bảng đi
 ![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/008-1-deployment.png?width=90pc)
 
 
-7. Khi đã triển khai xong, hãy ghi nhớ Giao diện người dùng, Pool người dùng và, nếu bạn muốn tương tác với các nhà cung cấp mô hình bên thứ ba,API_KEYS để truy cập các nhà cung cấp mô hình bên thứ ba.
+8. Khi đã triển khai xong, hãy ghi nhớ Giao diện người dùng, Pool người dùng và, nếu bạn muốn tương tác với các nhà cung cấp mô hình bên thứ ba,API_KEYS để truy cập các nhà cung cấp mô hình bên thứ ba.
 
 ```
 ...
@@ -115,14 +134,14 @@ GenAIChatBotStack.ApiKeysSecretNameXXXX = ApiKeysSecretName-xxxxxx
 ...
 ```
 
-8. Mở liên kết **Cognito User Pool** được tạo từ các đầu ra ở trên.
+9. Mở liên kết **Cognito User Pool** được tạo từ các đầu ra ở trên.
 
 
 ![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/009-1-deployment.png?width=90pc)
 
-9. Thêm một người dùng sẽ được sử dụng để đăng nhập vào giao diện web.
+10. Thêm một người dùng sẽ được sử dụng để đăng nhập vào giao diện web.
 
-10. Mở **URL Giao diện** từ các đầu ra ở trên, ví dụ: dxxxxxxxxxxxxx.cloudfront.net.
+11. Mở **URL Giao diện** từ các đầu ra ở trên, ví dụ: dxxxxxxxxxxxxx.cloudfront.net.
 
 
-11. Đăng nhập bằng người dùng đã tạo ở Bước 8 và làm theo hướng dẫn.
+12. Đăng nhập bằng người dùng đã tạo ở Bước 8 và làm theo hướng dẫn.

@@ -12,21 +12,21 @@
     <title>Triển khai :: Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS</title>
 
     
-    <link href="/css/nucleus.css?1726892569" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1726892569" rel="stylesheet">
-    <link href="/css/hybrid.css?1726892569" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1726892569" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1726892569" rel="stylesheet">
-    <link href="/css/auto-complete.css?1726892569" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1726892569" rel="stylesheet">
-    <link href="/css/theme.css?1726892569" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1726892569" rel="stylesheet">
+    <link href="/css/nucleus.css?1726893957" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1726893957" rel="stylesheet">
+    <link href="/css/hybrid.css?1726893957" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1726893957" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1726893957" rel="stylesheet">
+    <link href="/css/auto-complete.css?1726893957" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1726893957" rel="stylesheet">
+    <link href="/css/theme.css?1726893957" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1726893957" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1726892569" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1726893957" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1726892569"></script>
+    <script src="/js/jquery-3.3.1.min.js?1726893957"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1726892569"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1726892569"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1726893957"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1726893957"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1726892569"></script>
+<script type="text/javascript" src="/js/search.js?1726893957"></script>
 
     
   </div>
@@ -1134,13 +1134,28 @@
 <p>Khi hoàn tất, hãy trả lời Y để tạo hoặc cập nhật cấu hình của bạn.</p>
 <p><img alt="4-deployment" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/013-1-deployment.png?width=90pc"></p>
 <p>Cấu hình của bạn hiện được lưu trữ trong <code>bin/config.json</code>. Bạn có thể chạy lại lệnh <code>npm run config</code> khi cần để cập nhật <code>config.json</code>.</p>
+<ol start="6">
+<li>Cài đặt <strong>AWS CDK CLI</strong>
+Sử dụng <strong>Node Package Manager (npm)</strong> để cài đặt CDK CLI. Chúng tôi khuyến nghị bạn cài đặt nó một cách toàn cầu bằng lệnh sau:</li>
+</ol>
+<pre tabindex="0"><code>npm install -g aws-cdk
+</code></pre><ul>
+<li><strong>Đặt thông tin xác thực AWS dưới dạng biến môi trường:</strong></li>
+</ul>
+<p>Thay thế your_aws_access_key_id và your_aws_secret_access_key bằng thông tin xác thực AWS thực tế của bạn:</p>
 <pre tabindex="0"><code>export AWS_ACCESS_KEY_ID=your_aws_access_key_id
 export AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
 </code></pre><p><img alt="4-deployment" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/006-1-deployment.png?width=90pc"></p>
+<p>Các lệnh này sẽ tạm thời đặt thông tin xác thực AWS của bạn trong phiên terminal hiện tại. Chúng cần thiết để xác thực các cuộc gọi từ AWS CLI hoặc SDK trong phiên làm việc.</p>
+<ul>
+<li><strong>Kiểm tra các biến môi trường:</strong></li>
+</ul>
+<p>Bạn có thể kiểm tra xem các biến đã được đặt đúng hay chưa bằng các lệnh sau:</p>
 <pre tabindex="0"><code>echo $AWS_ACCESS_KEY_ID
 echo $AWS_SECRET_ACCESS_KEY
 </code></pre><p><img alt="4-deployment" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/007-1-deployment.png?width=90pc"></p>
-<ol start="6">
+<p>Điều này sẽ in ra các giá trị của <strong>AWS_ACCESS_KEY_ID</strong> và <strong>AWS_SECRET_ACCESS_KEY</strong> trong terminal để xác nhận rằng chúng đã được đặt thành công.</p>
+<ol start="7">
 <li>Bây giờ bạn có thể triển khai bằng cách chạy:</li>
 </ol>
 <pre tabindex="0"><code>npm run cdk deploy
@@ -1151,7 +1166,7 @@ echo $AWS_SECRET_ACCESS_KEY
 <p><img alt="4-deployment" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/010-1-deployment.png?width=90pc"></p>
 <p>Bạn có thể xem tiến trình triển khai CDK của mình trong <a href="https://console.aws.amazon.com/cloudformation/home">bảng điều khiển CloudFormation</a> trong <strong>region</strong> đã chọn.</p>
 <p><img alt="4-deployment" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/008-1-deployment.png?width=90pc"></p>
-<ol start="7">
+<ol start="8">
 <li>Khi đã triển khai xong, hãy ghi nhớ Giao diện người dùng, Pool người dùng và, nếu bạn muốn tương tác với các nhà cung cấp mô hình bên thứ ba,API_KEYS để truy cập các nhà cung cấp mô hình bên thứ ba.</li>
 </ol>
 <pre tabindex="0"><code>...
@@ -1160,11 +1175,11 @@ GenAIChatBotStack.UserInterfaceUserInterfaceDomanNameXXXXXXXX = dxxxxxxxxxxxxx.c
 GenAIChatBotStack.AuthenticationUserPoolLinkXXXXX = https://xxxxx.console.aws.amazon.com/cognito/v2/idp/user-pools/xxxxx_XXXXX/users?region=xxxxx
 GenAIChatBotStack.ApiKeysSecretNameXXXX = ApiKeysSecretName-xxxxxx
 ...
-</code></pre><ol start="8">
+</code></pre><ol start="9">
 <li>Mở liên kết <strong>Cognito User Pool</strong> được tạo từ các đầu ra ở trên.</li>
 </ol>
 <p><img alt="4-deployment" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/009-1-deployment.png?width=90pc"></p>
-<ol start="9">
+<ol start="10">
 <li>
 <p>Thêm một người dùng sẽ được sử dụng để đăng nhập vào giao diện web.</p>
 </li>
@@ -1698,19 +1713,19 @@ GenAIChatBotStack.ApiKeysSecretNameXXXX = ApiKeysSecretName-xxxxxx
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1726892569"></script>
-    <script src="/js/perfect-scrollbar.min.js?1726892569"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1726892569"></script>
-    <script src="/js/jquery.sticky.js?1726892569"></script>
-    <script src="/js/featherlight.min.js?1726892569"></script>
-    <script src="/js/highlight.pack.js?1726892569"></script>
+    <script src="/js/clipboard.min.js?1726893957"></script>
+    <script src="/js/perfect-scrollbar.min.js?1726893957"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1726893957"></script>
+    <script src="/js/jquery.sticky.js?1726893957"></script>
+    <script src="/js/featherlight.min.js?1726893957"></script>
+    <script src="/js/highlight.pack.js?1726893957"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1726892569"></script>
-    <script src="/js/learn.js?1726892569"></script>
-    <script src="/js/hugo-learn.js?1726892569"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1726893957"></script>
+    <script src="/js/learn.js?1726893957"></script>
+    <script src="/js/hugo-learn.js?1726893957"></script>
 
-    <link href="/mermaid/mermaid.css?1726892569" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1726892569"></script>
+    <link href="/mermaid/mermaid.css?1726893957" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1726893957"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

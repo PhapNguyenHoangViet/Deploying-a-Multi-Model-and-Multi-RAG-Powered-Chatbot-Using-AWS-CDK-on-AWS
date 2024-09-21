@@ -68,12 +68,25 @@ When done, answer Y to create or update your configuration.
 
 Your configuration is now stored under `bin/config.json`. You can re-run the `npm run config` command as needed to update your `config.json`
 
+6. Install the AWS CDK CLI
+Use the Node Package Manager to install the CDK CLI. We recommend that you install it globally using the following command:
+```
+npm install -g aws-cdk
+```
+- **Set AWS Credentials as Environment Variables:**
+
+Replace your_aws_access_key_id and your_aws_secret_access_key with your actual AWS credentials:
 ```
 export AWS_ACCESS_KEY_ID=your_aws_access_key_id
 export AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
 ```
 
 ![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/006-1-deployment.png?width=90pc)
+
+These commands temporarily set your AWS credentials in the current terminal session. They are essential for authenticating AWS CLI or SDK calls within the session.
+
+- **Verify the Environment Variables:**
+You can check if the variables were set correctly using the following commands:
 
 ```
 echo $AWS_ACCESS_KEY_ID
@@ -82,8 +95,9 @@ echo $AWS_SECRET_ACCESS_KEY
 
 ![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/007-1-deployment.png?width=90pc)
 
+This will print the values of AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY in the terminal to confirm they've been set.
 
-6. You can now deploy by running:
+7. You can now deploy by running:
 
 ```
 npm run cdk deploy
@@ -103,7 +117,7 @@ You can view the progress of your CDK deployment in the [CloudFormation console]
 ![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/008-1-deployment.png?width=90pc)
 
 
-7. Once deployed, take note of the User Interface, User Pool and, if you want to interact with 3P models providers, the Secret where to store API_KEYS to access 3P model providers.
+8. Once deployed, take note of the User Interface, User Pool and, if you want to interact with 3P models providers, the Secret where to store API_KEYS to access 3P model providers.
 
 ```
 ...
@@ -114,13 +128,13 @@ GenAIChatBotStack.ApiKeysSecretNameXXXX = ApiKeysSecretName-xxxxxx
 ...
 ```
 
-8. Open the generated **Cognito User Pool** Link from outputs above.
+9. Open the generated **Cognito User Pool** Link from outputs above.
 
 
 ![4-deployment](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/009-1-deployment.png?width=90pc)
 
-9. Add a user that will be used to log into the web interface.
+10. Add a user that will be used to log into the web interface.
 
-10. Open the User **Interface Url** for the outputs above, i.e. dxxxxxxxxxxxxx.cloudfront.net.
+11. Open the User **Interface Url** for the outputs above, i.e. dxxxxxxxxxxxxx.cloudfront.net.
 
-11. Login with the user created in Step 8 and follow the instructions.
+12. Login with the user created in Step 8 and follow the instructions.

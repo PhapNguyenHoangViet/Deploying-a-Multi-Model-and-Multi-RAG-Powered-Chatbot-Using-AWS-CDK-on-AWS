@@ -12,21 +12,21 @@
     <title>Deployment :: Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS</title>
 
     
-    <link href="/css/nucleus.css?1726892569" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1726892569" rel="stylesheet">
-    <link href="/css/hybrid.css?1726892569" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1726892569" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1726892569" rel="stylesheet">
-    <link href="/css/auto-complete.css?1726892569" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1726892569" rel="stylesheet">
-    <link href="/css/theme.css?1726892569" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1726892569" rel="stylesheet">
+    <link href="/css/nucleus.css?1726893957" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1726893957" rel="stylesheet">
+    <link href="/css/hybrid.css?1726893957" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1726893957" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1726893957" rel="stylesheet">
+    <link href="/css/auto-complete.css?1726893957" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1726893957" rel="stylesheet">
+    <link href="/css/theme.css?1726893957" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1726893957" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1726892569" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1726893957" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1726892569"></script>
+    <script src="/js/jquery-3.3.1.min.js?1726893957"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1726892569"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1726892569"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1726893957"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1726893957"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1726892569"></script>
+<script type="text/javascript" src="/js/search.js?1726893957"></script>
 
     
   </div>
@@ -1134,13 +1134,28 @@ When done, answer Y to create or update your configuration.</li>
 </ul>
 <p><img alt="4-deployment" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/013-1-deployment.png?width=90pc"></p>
 <p>Your configuration is now stored under <code>bin/config.json</code>. You can re-run the <code>npm run config</code> command as needed to update your <code>config.json</code></p>
+<ol start="6">
+<li>Install the AWS CDK CLI
+Use the Node Package Manager to install the CDK CLI. We recommend that you install it globally using the following command:</li>
+</ol>
+<pre tabindex="0"><code>npm install -g aws-cdk
+</code></pre><ul>
+<li><strong>Set AWS Credentials as Environment Variables:</strong></li>
+</ul>
+<p>Replace your_aws_access_key_id and your_aws_secret_access_key with your actual AWS credentials:</p>
 <pre tabindex="0"><code>export AWS_ACCESS_KEY_ID=your_aws_access_key_id
 export AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
 </code></pre><p><img alt="4-deployment" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/006-1-deployment.png?width=90pc"></p>
+<p>These commands temporarily set your AWS credentials in the current terminal session. They are essential for authenticating AWS CLI or SDK calls within the session.</p>
+<ul>
+<li><strong>Verify the Environment Variables:</strong>
+You can check if the variables were set correctly using the following commands:</li>
+</ul>
 <pre tabindex="0"><code>echo $AWS_ACCESS_KEY_ID
 echo $AWS_SECRET_ACCESS_KEY
 </code></pre><p><img alt="4-deployment" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/007-1-deployment.png?width=90pc"></p>
-<ol start="6">
+<p>This will print the values of AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY in the terminal to confirm they&rsquo;ve been set.</p>
+<ol start="7">
 <li>You can now deploy by running:</li>
 </ol>
 <pre tabindex="0"><code>npm run cdk deploy
@@ -1151,7 +1166,7 @@ echo $AWS_SECRET_ACCESS_KEY
 <p><img alt="4-deployment" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/010-1-deployment.png?width=90pc"></p>
 <p>You can view the progress of your CDK deployment in the <a href="https://console.aws.amazon.com/cloudformation/home">CloudFormation console</a> in the selected region.</p>
 <p><img alt="4-deployment" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/008-1-deployment.png?width=90pc"></p>
-<ol start="7">
+<ol start="8">
 <li>Once deployed, take note of the User Interface, User Pool and, if you want to interact with 3P models providers, the Secret where to store API_KEYS to access 3P model providers.</li>
 </ol>
 <pre tabindex="0"><code>...
@@ -1160,11 +1175,11 @@ GenAIChatBotStack.UserInterfaceUserInterfaceDomanNameXXXXXXXX = dxxxxxxxxxxxxx.c
 GenAIChatBotStack.AuthenticationUserPoolLinkXXXXX = https://xxxxx.console.aws.amazon.com/cognito/v2/idp/user-pools/xxxxx_XXXXX/users?region=xxxxx
 GenAIChatBotStack.ApiKeysSecretNameXXXX = ApiKeysSecretName-xxxxxx
 ...
-</code></pre><ol start="8">
+</code></pre><ol start="9">
 <li>Open the generated <strong>Cognito User Pool</strong> Link from outputs above.</li>
 </ol>
 <p><img alt="4-deployment" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/4-deploy/009-1-deployment.png?width=90pc"></p>
-<ol start="9">
+<ol start="10">
 <li>
 <p>Add a user that will be used to log into the web interface.</p>
 </li>
@@ -1698,19 +1713,19 @@ GenAIChatBotStack.ApiKeysSecretNameXXXX = ApiKeysSecretName-xxxxxx
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1726892569"></script>
-    <script src="/js/perfect-scrollbar.min.js?1726892569"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1726892569"></script>
-    <script src="/js/jquery.sticky.js?1726892569"></script>
-    <script src="/js/featherlight.min.js?1726892569"></script>
-    <script src="/js/highlight.pack.js?1726892569"></script>
+    <script src="/js/clipboard.min.js?1726893957"></script>
+    <script src="/js/perfect-scrollbar.min.js?1726893957"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1726893957"></script>
+    <script src="/js/jquery.sticky.js?1726893957"></script>
+    <script src="/js/featherlight.min.js?1726893957"></script>
+    <script src="/js/highlight.pack.js?1726893957"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1726892569"></script>
-    <script src="/js/learn.js?1726892569"></script>
-    <script src="/js/hugo-learn.js?1726892569"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1726893957"></script>
+    <script src="/js/learn.js?1726893957"></script>
+    <script src="/js/hugo-learn.js?1726893957"></script>
 
-    <link href="/mermaid/mermaid.css?1726892569" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1726892569"></script>
+    <link href="/mermaid/mermaid.css?1726893957" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1726893957"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
