@@ -28,7 +28,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
 
 3. Áp dụng các thay đổi do **NVM** thực hiện vào phiên làm việc hiện tại của shell.
 ```
-source ~/bashrc
+source ~/.bashrc
 ```
 - Lệnh này tải lại tệp .bashrc trong thư mục home của bạn để áp dụng các thay đổi được thực hiện bởi script cài đặt NVM. Nó đảm bảo rằng các lệnh của NVM có sẵn trong phiên shell hiện tại của bạn.
 

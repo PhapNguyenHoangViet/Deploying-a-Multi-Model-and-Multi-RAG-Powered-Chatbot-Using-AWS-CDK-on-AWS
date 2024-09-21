@@ -30,7 +30,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
 3. Applies the changes made by **NVM** to your current shell session.
 
 ```
-source ~/bashrc
+source ~/.bashrc
 ```
 
 - This command reloads the .bashrc file in your home directory to apply the changes made by the NVM installation script. It ensures that NVM commands are available in your current shell session.
