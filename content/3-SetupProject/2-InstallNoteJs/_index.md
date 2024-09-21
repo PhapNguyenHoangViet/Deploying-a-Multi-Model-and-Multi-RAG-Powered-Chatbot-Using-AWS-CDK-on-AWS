@@ -45,7 +45,9 @@ nvm --version
 ![installnodejs](/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/2-installnodejs/003-2-installnodejs.png?width=90pc)
 
 4. Installs **Node.js** version 18 using NVM.
+```
 nvm install 18
+```
 
 - Installs Node.js version 18 using NVM. You can install and manage different versions of Node.js with NVM.
 

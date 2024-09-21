@@ -12,21 +12,21 @@
     <title>Install Docker :: Deploying a Multi-Model and Multi-RAG Powered Chatbot Using AWS CDK on AWS</title>
 
     
-    <link href="/css/nucleus.css?1726889308" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1726889308" rel="stylesheet">
-    <link href="/css/hybrid.css?1726889308" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1726889308" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1726889308" rel="stylesheet">
-    <link href="/css/auto-complete.css?1726889308" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1726889308" rel="stylesheet">
-    <link href="/css/theme.css?1726889308" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1726889308" rel="stylesheet">
+    <link href="/css/nucleus.css?1726889498" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1726889498" rel="stylesheet">
+    <link href="/css/hybrid.css?1726889498" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1726889498" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1726889498" rel="stylesheet">
+    <link href="/css/auto-complete.css?1726889498" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1726889498" rel="stylesheet">
+    <link href="/css/theme.css?1726889498" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1726889498" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1726889308" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1726889498" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1726889308"></script>
+    <script src="/js/jquery-3.3.1.min.js?1726889498"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1726889308"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1726889308"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1726889498"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1726889498"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1726889308"></script>
+<script type="text/javascript" src="/js/search.js?1726889498"></script>
 
     
   </div>
@@ -1082,46 +1082,46 @@
 
 
 	<ol>
-<li><strong>Updates the package list</strong> on your system.
-sudo apt-get update</li>
+<li><strong>Updates the package list</strong> on your system.</li>
 </ol>
-<p><img alt="installdocker" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/001-3-installdocker.png?width=90pc"></p>
+<pre tabindex="0"><code>sudo apt-get update
+</code></pre><p><img alt="installdocker" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/001-3-installdocker.png?width=90pc"></p>
 <ol start="2">
-<li>Installs <strong>Docker</strong>.
-sudo apt-get install -y docker.io</li>
+<li>Installs <strong>Docker</strong>.</li>
 </ol>
-<p><img alt="installdocker" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/002-3-installdocker.png?width=90pc"></p>
+<pre tabindex="0"><code>sudo apt-get install -y docker.io
+</code></pre><p><img alt="installdocker" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/002-3-installdocker.png?width=90pc"></p>
 <ol start="3">
-<li>Starts the <strong>Docker service</strong> and <strong>enables Docker</strong> to start automatically at boot.
-sudo systemctl start docker
-sudo systemctl enable docker</li>
+<li>Starts the <strong>Docker service</strong> and <strong>enables Docker</strong> to start automatically at boot.</li>
 </ol>
-<p><img alt="installdocker" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/003-3-installdocker.png?width=90pc"></p>
+<pre tabindex="0"><code>sudo systemctl start docker
+sudo systemctl enable docker
+</code></pre><p><img alt="installdocker" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/003-3-installdocker.png?width=90pc"></p>
 <ol start="4">
-<li>Adds your user to the Docker group to run Docker commands without sudo.
-sudo usermod -aG docker $USER</li>
+<li>Adds your user to the Docker group to run Docker commands without sudo.</li>
 </ol>
-<p><img alt="installdocker" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/004-3-installdocker.png?width=90pc"></p>
+<pre tabindex="0"><code>sudo usermod -aG docker $USER
+</code></pre><p><img alt="installdocker" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/004-3-installdocker.png?width=90pc"></p>
 <ol start="5">
-<li>Displays the installed <strong>Docker version.</strong>
-docker &ndash;version</li>
+<li>Displays the installed <strong>Docker version.</strong></li>
 </ol>
-<p><img alt="installdocker" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/005-3-installdocker.png?width=90pc"></p>
+<pre tabindex="0"><code>docker --version
+</code></pre><p><img alt="installdocker" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/005-3-installdocker.png?width=90pc"></p>
 <ol start="6">
 <li>Updates the current group membership to apply changes.
 Lists the groups your user is a member of.
-Lists permissions of the Docker socket file.
-newgrp docker
-groups $USER
-ls -l /var/run/docker.sock</li>
+Lists permissions of the Docker socket file.</li>
 </ol>
-<p><img alt="installdocker" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/006-3-installdocker.png?width=90pc"></p>
+<pre tabindex="0"><code>newgrp docker
+groups $USER
+ls -l /var/run/docker.sock
+</code></pre><p><img alt="installdocker" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/006-3-installdocker.png?width=90pc"></p>
 <ol start="7">
 <li>Sets permissions on the Docker socket file to allow read/write for the owner and group.
-Changes the owner and group of the Docker socket file.
-sudo chmod 660 /var/run/docker.sock</li>
+Changes the owner and group of the Docker socket file.</li>
 </ol>
-<p><img alt="installdocker" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/007-3-installdocker.png?width=90pc"></p>
+<pre tabindex="0"><code>sudo chmod 660 /var/run/docker.sock
+</code></pre><p><img alt="installdocker" src="/Deploying-a-Multi-Model-and-Multi-RAG-Powered-Chatbot-Using-AWS-CDK-on-AWS/images/3-setupproject/3-installdocker/007-3-installdocker.png?width=90pc"></p>
 
 
 
@@ -1648,19 +1648,19 @@ sudo chmod 660 /var/run/docker.sock</li>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1726889308"></script>
-    <script src="/js/perfect-scrollbar.min.js?1726889308"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1726889308"></script>
-    <script src="/js/jquery.sticky.js?1726889308"></script>
-    <script src="/js/featherlight.min.js?1726889308"></script>
-    <script src="/js/highlight.pack.js?1726889308"></script>
+    <script src="/js/clipboard.min.js?1726889498"></script>
+    <script src="/js/perfect-scrollbar.min.js?1726889498"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1726889498"></script>
+    <script src="/js/jquery.sticky.js?1726889498"></script>
+    <script src="/js/featherlight.min.js?1726889498"></script>
+    <script src="/js/highlight.pack.js?1726889498"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1726889308"></script>
-    <script src="/js/learn.js?1726889308"></script>
-    <script src="/js/hugo-learn.js?1726889308"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1726889498"></script>
+    <script src="/js/learn.js?1726889498"></script>
+    <script src="/js/hugo-learn.js?1726889498"></script>
 
-    <link href="/mermaid/mermaid.css?1726889308" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1726889308"></script>
+    <link href="/mermaid/mermaid.css?1726889498" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1726889498"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
